@@ -1,0 +1,64 @@
+{
+  "hero": {
+    "title": "Film Production & Fixing Services in Rwanda",
+    "subtitle": "A social enterprise producing films and reinvesting profits into training youth and women.",
+    "image": "/images/crew.jpg",
+    "cta1Text": "Production & Fixing Services",
+    "cta1Link": "/services",
+    "cta2Text": "Our Social Impact",
+    "cta2Link": "/impact"
+  },
+  "whatWeDo": {
+    "title": "What We Do",
+    "subtitle": "Professional film services with a social mission",
+    "services": [
+      {
+        "title": "Film Production",
+        "icon": "🎬",
+        "description": "Professional documentary films, NGO videos, and commercial content production.",
+        "servicesList": [
+          "Documentary Films",
+          "NGO & Institutional Videos",
+          "Photography & Videography",
+          "Editing & Post-Production"
+        ]
+      },
+      {
+        "title": "Film Fixing",
+        "icon": "🌍",
+        "description": "Complete production support for international crews filming in Rwanda.",
+        "servicesList": [
+          "Location Scouting",
+          "Film Permits & Coordination",
+          "Local Crew Sourcing",
+          "Equipment & Logistics"
+        ]
+      },
+      {
+        "title": "Animation & Training",
+        "icon": "✨",
+        "description": "Animation production and professional training programs for youth and women.",
+        "servicesList": [
+          "2D/3D Animation",
+          "Animation Workshops",
+          "Film Training Programs",
+          "Youth Empowerment"
+        ]
+      }
+    ]
+  },
+  "socialModel": {
+    "title": "Our Social Enterprise Model",
+    "description": "MEB CBC operates as a social enterprise where 100% of profits from our commercial film production and fixing services are reinvested into:",
+    "image": "/images/training.jpg",
+    "impactPoints": [
+      "🎓 Free and subsidized training programs",
+      "👥 Professional development for youth and women",
+      "🎨 Animation workshops and creative skills development",
+      "💼 Job creation in the creative industry",
+      "🌱 Sustainable growth of Rwanda's media sector"
+    ],
+    "ctaText": "Learn About Our Impact",
+    "ctaLink": "/impact"
+  }
+}

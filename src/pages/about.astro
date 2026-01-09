@@ -1,0 +1,319 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<Layout title="About Us" description="Learn about MEB CBC Rwanda - a social enterprise dedicated to film production and youth empowerment">
+  <Hero 
+    title="About MEB CBC Rwanda"
+    subtitle="Empowering communities through film and training"
+    image="/images/crew.jpg"
+    height="60vh"
+  />
+  
+  <!-- Our Story -->
+  <section class="our-story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-image">
+          <img src="/images/training.jpg" alt="MEB CBC Team">
+        </div>
+        <div class="story-content">
+          <h2>Who We Are</h2>
+          <p>MEB CBC is a <strong>Rwanda-based film production social enterprise</strong> localized in 2021. We bridge professional filmmaking with social impact, creating a sustainable model that benefits both our clients and our community.</p>
+          
+          <p>We produce high-quality professional films for commercial clients, NGOs, and international productions, while simultaneously operating as a social enterprise that reinvests <strong>100% of our profits</strong> into non-profit training programs for youth and women in Rwanda.</p>
+          
+          <p>Our dual mission allows us to maintain professional excellence in film production while making a lasting impact on Rwanda's creative industry and the lives of aspiring filmmakers and animators.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Mission & Vision -->
+  <section class="mission-vision">
+    <div class="container">
+      <div class="grid grid-2">
+        <div class="mission-card">
+          <div class="icon">🎯</div>
+          <h3>Our Mission</h3>
+          <p>To produce world-class films and provide professional fixing services while creating sustainable opportunities for Rwandan youth and women through comprehensive training and job creation in the film and animation industry.</p>
+        </div>
+        
+        <div class="mission-card">
+          <div class="icon">🌟</div>
+          <h3>Our Vision</h3>
+          <p>To be East Africa's leading social enterprise in film production, recognized for both our creative excellence and our transformative impact on communities through media education and empowerment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- What Makes Us Different -->
+  <section class="differentiators">
+    <div class="container">
+      <div class="section-title">
+        <h2>What Makes Us Different</h2>
+      </div>
+      
+      <div class="diff-grid">
+        <div class="diff-item">
+          <div class="diff-icon">💼</div>
+          <h4>Professional Excellence</h4>
+          <p>We deliver the same high-quality production and fixing services as any commercial film company, with experienced crews and international standards.</p>
+        </div>
+        
+        <div class="diff-item">
+          <div class="diff-icon">❤️</div>
+          <h4>Social Impact</h4>
+          <p>Every project you do with us directly funds training programs for underprivileged youth and women, creating lasting change in communities.</p>
+        </div>
+        
+        <div class="diff-item">
+          <div class="diff-icon">🌍</div>
+          <h4>Local Expertise</h4>
+          <p>As a locally-rooted organization, we bring authentic cultural understanding and deep community connections to every project.</p>
+        </div>
+        
+        <div class="diff-item">
+          <div class="diff-icon">📈</div>
+          <h4>Sustainable Model</h4>
+          <p>Our social enterprise model ensures long-term sustainability for both our business operations and our training programs.</p>
+        </div>
+        
+        <div class="diff-item">
+          <div class="diff-icon">🤝</div>
+          <h4>Partnership Approach</h4>
+          <p>We collaborate closely with international partners like Media Education Babelsberg to bring world-class training to Rwanda.</p>
+        </div>
+        
+        <div class="diff-item">
+          <div class="diff-icon">🎓</div>
+          <h4>Proven Track Record</h4>
+          <p>Hundreds of creatives trained, multiple successful productions, and measurable impact on Rwanda's media landscape.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Values -->
+  <section class="values">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Core Values</h2>
+      </div>
+      
+      <div class="values-grid">
+        <div class="value-card">
+          <h4>Excellence</h4>
+          <p>We maintain the highest professional standards in every project we undertake.</p>
+        </div>
+        
+        <div class="value-card">
+          <h4>Empowerment</h4>
+          <p>We believe in creating opportunities that enable people to build sustainable careers.</p>
+        </div>
+        
+        <div class="value-card">
+          <h4>Integrity</h4>
+          <p>We operate with transparency and honesty in all our business and training activities.</p>
+        </div>
+        
+        <div class="value-card">
+          <h4>Collaboration</h4>
+          <p>We work together with communities, partners, and clients to achieve shared goals.</p>
+        </div>
+        
+        <div class="value-card">
+          <h4>Innovation</h4>
+          <p>We continuously seek creative solutions to both production challenges and social needs.</p>
+        </div>
+        
+        <div class="value-card">
+          <h4>Sustainability</h4>
+          <p>We build models that create lasting positive change for people and the industry.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA -->
+  <section class="about-cta">
+    <div class="container">
+      <div class="cta-box">
+        <h2>Want to Work With Us?</h2>
+        <p>Let's create something amazing together while making a positive impact on Rwanda's creative community.</p>
+        <div class="cta-buttons">
+          <a href="/services" class="btn btn-primary">Our Services</a>
+          <a href="/contact" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .our-story {
+    padding: 5rem 0;
+  }
+  
+  .story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .story-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  }
+  
+  .story-content h2 {
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+  }
+  
+  .story-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+  }
+  
+  .mission-vision {
+    background: #f8f9fa;
+  }
+  
+  .mission-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+  }
+  
+  .mission-card .icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .mission-card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+  
+  .mission-card p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+  
+  .differentiators {
+    background: white;
+  }
+  
+  .diff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .diff-item {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .diff-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .diff-item h4 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+  }
+  
+  .diff-item p {
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+  
+  .values {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+  
+  .values .section-title h2 {
+    color: white;
+  }
+  
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .value-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .value-card h4 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+  }
+  
+  .value-card p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+  }
+  
+  .about-cta {
+    background: var(--primary);
+  }
+  
+  .cta-box {
+    text-align: center;
+    color: white;
+  }
+  
+  .cta-box h2 {
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-box p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto 2rem;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  @media (max-width: 968px) {
+    .story-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .cta-buttons .btn {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+</style>

@@ -1,0 +1,121 @@
+---
+---
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>MEB CBC Rwanda</h3>
+        <p>A social enterprise producing films and reinvesting profits into training youth and women.</p>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/animation">Animation</a></li>
+          <li><a href="/training">Training</a></li>
+          <li><a href="/impact">Impact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="/services#production">Film Production</a></li>
+          <li><a href="/services#fixing">Film Fixing</a></li>
+          <li><a href="/animation">Animation</a></li>
+          <li><a href="/training">Workshops</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <ul class="contact-info">
+          <li>📍 Kigali, Rwanda</li>
+          <li>📞 +250 795 512 502</li>
+          <li>✉️ mebrmp2022@gmail.com</li>
+          <li>🌐 www.meb.rw</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      <p>&copy; {new Date().getFullYear()} MEB CBC Rwanda. All rights reserved.</p>
+      <p>Social Enterprise | Film Production | Training</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background: var(--primary);
+    color: white;
+    padding: 4rem 0 2rem;
+    margin-top: 4rem;
+  }
+  
+  .footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
+  
+  .footer-section h3 {
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .footer-section h4 {
+    color: var(--accent);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+  }
+  
+  .footer-section p {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.8;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 0.7rem;
+  }
+  
+  .footer-section ul li a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section ul li a:hover {
+    color: var(--accent);
+  }
+  
+  .contact-info li {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer-bottom p {
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+  }
+</style>

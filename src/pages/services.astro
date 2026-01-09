@@ -1,0 +1,368 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+---
+
+<Layout title="Production & Fixing Services" description="Professional film production and fixing services in Rwanda">
+  <Hero 
+    title="Production & Fixing Services"
+    subtitle="Professional film services for local and international clients"
+    image="/images/crew.jpg"
+    height="60vh"
+  />
+  
+  <!-- Services Overview -->
+  <section class="services-intro">
+    <div class="container">
+      <div class="intro-content">
+        <h2>Comprehensive Film Solutions</h2>
+        <p>MEB CBC provides end-to-end film production and fixing services for clients ranging from international broadcasters to local NGOs. Our experienced team ensures your project runs smoothly from concept to delivery.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Film Production -->
+  <section id="production" class="production-services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Film Production Services</h2>
+        <p>Professional video production for all your needs</p>
+      </div>
+      
+      <div class="grid grid-2">
+        <ServiceCard 
+          title="Documentary Films"
+          icon="🎥"
+          description="Compelling documentary storytelling that captures authentic voices and important narratives."
+          services={[
+            "Research and story development",
+            "Multi-camera filming",
+            "Interview setups and lighting",
+            "Post-production and delivery"
+          ]}
+        />
+        
+        <ServiceCard 
+          title="NGO & Institutional Videos"
+          icon="🏢"
+          description="Professional videos that communicate your organization's mission and impact effectively."
+          services={[
+            "Program documentation",
+            "Impact stories and testimonials",
+            "Training and educational videos",
+            "Event coverage"
+          ]}
+        />
+        
+        <ServiceCard 
+          title="Photography & Videography"
+          icon="📸"
+          description="High-quality visual content for marketing, documentation, and storytelling purposes."
+          services={[
+            "Commercial photography",
+            "Event documentation",
+            "Promotional videos",
+            "Aerial drone footage"
+          ]}
+        />
+        
+        <ServiceCard 
+          title="Editing & Post-Production"
+          icon="✂️"
+          description="Professional editing, color grading, and sound design to bring your vision to life."
+          services={[
+            "Video editing and assembly",
+            "Color grading and correction",
+            "Sound design and mixing",
+            "Motion graphics and titles"
+          ]}
+        />
+      </div>
+    </div>
+  </section>
+  
+  <!-- Film Fixing -->
+  <section id="fixing" class="fixing-services">
+    <div class="container">
+      <div class="section-title">
+        <h2>Film Fixing Services</h2>
+        <p>Complete production support for filming in Rwanda</p>
+      </div>
+      
+      <div class="fixing-intro">
+        <p>Planning to film in Rwanda? Our fixing services make international productions seamless. We handle all logistics, permits, and local coordination so you can focus on creating great content.</p>
+      </div>
+      
+      <div class="grid grid-3">
+        <ServiceCard 
+          title="Location Scouting"
+          icon="🗺️"
+          description="Expert knowledge of Rwanda's diverse filming locations, from urban centers to remote villages."
+        />
+        
+        <ServiceCard 
+          title="Permits & Coordination"
+          icon="📋"
+          description="Full coordination with government agencies, local authorities, and community stakeholders."
+        />
+        
+        <ServiceCard 
+          title="Local Crew Sourcing"
+          icon="👥"
+          description="Access to experienced local crew members including camera operators, sound technicians, and production assistants."
+        />
+        
+        <ServiceCard 
+          title="Equipment & Logistics"
+          icon="🎬"
+          description="Professional equipment rental and complete logistics support including transportation and accommodation."
+        />
+        
+        <ServiceCard 
+          title="Cultural Mediation"
+          icon="🤝"
+          description="Cultural consultation and translation services to ensure respectful and effective community engagement."
+        />
+        
+        <ServiceCard 
+          title="Safeguarding"
+          icon="🛡️"
+          description="Comprehensive safeguarding protocols for vulnerable populations, particularly children and at-risk communities."
+        />
+      </div>
+    </div>
+  </section>
+  
+  <!-- Why Choose Us -->
+  <section class="why-choose">
+    <div class="container">
+      <div class="section-title">
+        <h2>Why Choose MEB CBC</h2>
+      </div>
+      
+      <div class="grid grid-2">
+        <div class="feature-box">
+          <div class="feature-icon">⭐</div>
+          <h3>Professional Quality</h3>
+          <p>International standards of production quality with experienced crews and modern equipment.</p>
+        </div>
+        
+        <div class="feature-box">
+          <div class="feature-icon">💰</div>
+          <h3>Competitive Pricing</h3>
+          <p>Cost-effective solutions without compromising on quality, with transparent pricing structures.</p>
+        </div>
+        
+        <div class="feature-box">
+          <div class="feature-icon">🌍</div>
+          <h3>Local Expertise</h3>
+          <p>Deep understanding of Rwanda's culture, regulations, and filming locations.</p>
+        </div>
+        
+        <div class="feature-box">
+          <div class="feature-icon">❤️</div>
+          <h3>Social Impact</h3>
+          <p>Your project directly contributes to training programs for Rwandan youth and women.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Equipment List -->
+  <section class="equipment">
+    <div class="container">
+      <div class="section-title">
+        <h2>Available Equipment</h2>
+        <p>Professional gear for any production</p>
+      </div>
+      
+      <div class="equipment-grid">
+        <div class="equipment-category">
+          <h4>📹 Cameras</h4>
+          <ul>
+            <li>Professional cinema cameras</li>
+            <li>4K broadcast cameras</li>
+            <li>Drone cameras</li>
+            <li>Action cameras</li>
+          </ul>
+        </div>
+        
+        <div class="equipment-category">
+          <h4>🎤 Audio</h4>
+          <ul>
+            <li>Shotgun microphones</li>
+            <li>Wireless lav systems</li>
+            <li>Audio recorders</li>
+            <li>Boom poles and accessories</li>
+          </ul>
+        </div>
+        
+        <div class="equipment-category">
+          <h4>💡 Lighting</h4>
+          <ul>
+            <li>LED panel lights</li>
+            <li>Softboxes and modifiers</li>
+            <li>Battery-powered lights</li>
+            <li>Reflectors and flags</li>
+          </ul>
+        </div>
+        
+        <div class="equipment-category">
+          <h4>🎬 Support</h4>
+          <ul>
+            <li>Professional tripods</li>
+            <li>Gimbals and stabilizers</li>
+            <li>Sliders and jibs</li>
+            <li>Monitors and playback</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA -->
+  <section class="services-cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Get in touch to discuss your production needs and receive a customized quote.</p>
+        <a href="/contact" class="btn btn-primary">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .services-intro {
+    padding: 3rem 0;
+    background: #f8f9fa;
+  }
+  
+  .intro-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .intro-content h2 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+  }
+  
+  .intro-content p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+  
+  .production-services {
+    background: white;
+  }
+  
+  .fixing-services {
+    background: #f8f9fa;
+  }
+  
+  .fixing-intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .fixing-intro p {
+    font-size: 1.15rem;
+    line-height: 1.8;
+  }
+  
+  .why-choose {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+  
+  .why-choose .section-title h2 {
+    color: white;
+  }
+  
+  .feature-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    text-align: center;
+  }
+  
+  .feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-box h3 {
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .feature-box p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.1rem;
+    line-height: 1.7;
+  }
+  
+  .equipment {
+    background: white;
+  }
+  
+  .equipment-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .equipment-category {
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 15px;
+  }
+  
+  .equipment-category h4 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+  }
+  
+  .equipment-category ul {
+    list-style: none;
+  }
+  
+  .equipment-category li {
+    padding: 0.5rem 0;
+    color: var(--text-light);
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  
+  .equipment-category li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+  }
+  
+  .services-cta {
+    background: var(--primary);
+    text-align: center;
+    color: white;
+  }
+  
+  .services-cta h2 {
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .services-cta p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+</style>

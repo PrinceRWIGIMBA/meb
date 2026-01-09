@@ -1,0 +1,255 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import ServiceCard from '../components/ServiceCard.astro';
+import GalleryItem from '../components/GalleryItem.astro';
+---
+
+<Layout title="Home">
+  <Hero 
+    title="Film Production & Fixing Services in Rwanda"
+    subtitle="A social enterprise producing films and reinvesting profits into training youth and women."
+    image="/images/crew.jpg"
+    cta1Text="Production & Fixing Services"
+    cta1Link="/services"
+    cta2Text="Our Social Impact"
+    cta2Link="/impact"
+  />
+  
+  <!-- What We Do Section -->
+  <section class="what-we-do">
+    <div class="container">
+      <div class="section-title">
+        <h2>What We Do</h2>
+        <p>Professional film services with a social mission</p>
+      </div>
+      
+      <div class="grid grid-3">
+        <ServiceCard 
+          title="Film Production"
+          icon="🎬"
+          description="Professional documentary films, NGO videos, and commercial content production."
+          services={[
+            "Documentary Films",
+            "NGO & Institutional Videos",
+            "Photography & Videography",
+            "Editing & Post-Production"
+          ]}
+        />
+        
+        <ServiceCard 
+          title="Film Fixing"
+          icon="🌍"
+          description="Complete production support for international crews filming in Rwanda."
+          services={[
+            "Location Scouting",
+            "Film Permits & Coordination",
+            "Local Crew Sourcing",
+            "Equipment & Logistics"
+          ]}
+        />
+        
+        <ServiceCard 
+          title="Animation & Training"
+          icon="✨"
+          description="Animation production and professional training programs for youth and women."
+          services={[
+            "2D/3D Animation",
+            "Animation Workshops",
+            "Film Training Programs",
+            "Youth Empowerment"
+          ]}
+        />
+      </div>
+    </div>
+  </section>
+  
+  <!-- Social Enterprise Model -->
+  <section class="social-model">
+    <div class="container">
+      <div class="model-content">
+        <div class="model-text">
+          <h2>Our Social Enterprise Model</h2>
+          <p>MEB CBC operates as a social enterprise where <strong>100% of profits</strong> from our commercial film production and fixing services are reinvested into:</p>
+          <ul class="impact-list">
+            <li>🎓 Free and subsidized training programs</li>
+            <li>👥 Professional development for youth and women</li>
+            <li>🎨 Animation workshops and creative skills development</li>
+            <li>💼 Job creation in the creative industry</li>
+            <li>🌱 Sustainable growth of Rwanda's media sector</li>
+          </ul>
+          <a href="/impact" class="btn btn-primary">Learn About Our Impact</a>
+        </div>
+        <div class="model-image">
+          <img src="/images/training.jpg" alt="Training Workshop">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Selected Works -->
+  <section class="selected-works">
+    <div class="container">
+      <div class="section-title">
+        <h2>Selected Works</h2>
+        <p>Films and animations that make a difference</p>
+      </div>
+      
+      <div class="grid grid-3">
+        <GalleryItem 
+          image="/images/lake-women-1.jpg"
+          title="Lake Women Documentary"
+          description="A powerful documentary highlighting the lives and stories of women working around Rwanda's lakes."
+          videoLink="#"
+        />
+        
+        <GalleryItem 
+          image="/images/isano.jpg"
+          title="Isano Animation"
+          description="An animated film created through our training program, showcasing local stories and culture."
+          videoLink="#"
+        />
+        
+        <GalleryItem 
+          image="/images/animation-still-1.jpg"
+          title="Nyiragitwa Animation"
+          description="Community-focused animation project developed with youth participants."
+          videoLink="#"
+        />
+        
+        <GalleryItem 
+          image="/images/animation-still-2.jpg"
+          title="Bwiza Animation"
+          description="Cultural storytelling through animation, produced by our training graduates."
+          videoLink="#"
+        />
+        
+        <GalleryItem 
+          image="/images/lake-women-2.jpg"
+          title="Community Stories"
+          description="Documentary series capturing authentic voices from communities across Rwanda."
+          videoLink="#"
+        />
+        
+        <GalleryItem 
+          image="/images/crew.jpg"
+          title="Behind the Scenes"
+          description="Professional production work with international and local crews."
+          videoLink="#"
+        />
+      </div>
+      
+      <div class="text-center mt-3">
+        <a href="/animation" class="btn btn-outline">View All Projects</a>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Call to Action -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Start Your Project?</h2>
+        <p>Whether you need production services, fixing support, or want to collaborate on training programs, we're here to help.</p>
+        <div class="cta-buttons">
+          <a href="/contact" class="btn btn-primary">Get in Touch</a>
+          <a href="/services" class="btn btn-secondary">View Services</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .what-we-do {
+    background: #f8f9fa;
+  }
+  
+  .social-model {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+  }
+  
+  .model-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+  }
+  
+  .model-text h2 {
+    color: white;
+    margin-bottom: 1.5rem;
+  }
+  
+  .model-text p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .impact-list {
+    list-style: none;
+    margin: 2rem 0;
+  }
+  
+  .impact-list li {
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.7rem 0;
+    line-height: 1.6;
+  }
+  
+  .model-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  }
+  
+  .selected-works {
+    background: white;
+  }
+  
+  .cta-section {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+  }
+  
+  .cta-content h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  @media (max-width: 968px) {
+    .model-content {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .cta-buttons .btn {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+</style>

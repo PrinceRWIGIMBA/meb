@@ -1,0 +1,110 @@
+---
+interface Props {
+  image: string;
+  title: string;
+  description: string;
+  videoLink?: string;
+}
+
+const { image, title, description, videoLink } = Astro.props;
+---
+
+<div class="gallery-item">
+  <div class="gallery-image">
+    <img src={image} alt={title}>
+    <div class="gallery-overlay">
+      {videoLink && (
+        <a href={videoLink} class="play-button" target="_blank" rel="noopener">▶</a>
+      )}
+    </div>
+  </div>
+  <div class="gallery-content">
+    <h3>{title}</h3>
+    <p>{description}</p>
+  </div>
+</div>
+
+<style>
+  .gallery-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .gallery-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .gallery-image {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover .gallery-image img {
+    transform: scale(1.1);
+  }
+  
+  .gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 26, 46, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .gallery-item:hover .gallery-overlay {
+    opacity: 1;
+  }
+  
+  .play-button {
+    width: 60px;
+    height: 60px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+  
+  .play-button:hover {
+    transform: scale(1.1);
+    background: #B7751E;
+  }
+  
+  .gallery-content {
+    padding: 1.5rem;
+  }
+  
+  .gallery-content h3 {
+    color: var(--primary);
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+  }
+  
+  .gallery-content p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+</style>

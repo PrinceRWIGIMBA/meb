@@ -1,13 +1,57 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Content Manager</title>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-  </head>
-  <body>
-    <!-- Include the script that builds the page and powers Netlify CMS -->
-    <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
-  </body>
+  <title>Content Manager - MEB CBC Rwanda</title>
+  
+  <!-- Netlify CMS -->
+  <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
+  
+  
+  <!-- Custom styling for CMS -->
+  <style>
+    /* Custom CMS styling */
+    :root {
+      --primary: #1a1a2e;
+      --secondary: #16213e;
+      --accent: #e94560;
+    }
+    
+    /* Override CMS colors to match your brand */
+    .css-1p2xvw5-AppMainContainer {
+      background-color: #f8f9fa;
+    }
+    
+    .css-v758ki-AppHeader {
+      background-color: var(--primary) !important;
+    }
+    
+    .css-1eg3dqv-CollectionTopRow {
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <!-- CMS will be injected here -->
+  
+  <script>
+    // Custom preview templates can be added here
+    CMS.registerPreviewStyle("/css/style.css");
+    
+    // Custom widgets or functionality
+    CMS.init({
+      config: {
+        backend: {
+          name: 'git-gateway',
+          branch: 'main'
+        }
+      }
+    });
+  </script>
+</body>
 </html>
+
+

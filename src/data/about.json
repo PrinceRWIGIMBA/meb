@@ -1,20 +1,78 @@
 {
   "hero": {
-    "image": "/images/safeguarding-umbrella-graphic-2022.png",
-    "title": "t78627836786237867823787823678627867867382",
-    "subtitle": "23e239y8923893728932u8239u2389"
+    "title": "About MEB CBC Rwanda",
+    "subtitle": "Empowering communities through film and training",
+    "image": "/images/crew.jpg"
   },
   "story": {
-    "title": "2383e89239y3829y28",
-    "content": "i﻿o23jioh23ej23iohro23hro23hro23urh23",
-    "image": "/images/_DSC2427.jpg"
+    "title": "Who We Are",
+    "content": "MEB CBC is a **Rwanda-based film production social enterprise** localized in 2021. We bridge professional filmmaking with social impact, creating a sustainable model that benefits both our clients and our community.\n\nWe produce high-quality professional films for commercial clients, NGOs, and international productions, while simultaneously operating as a social enterprise that reinvests **100% of our profits** into non-profit training programs for youth and women in Rwanda.\n\nOur dual mission allows us to maintain professional excellence in film production while making a lasting impact on Rwanda's creative industry and the lives of aspiring filmmakers and animators.",
+    "image": "/images/training.jpg"
   },
   "mission": {
-    "title": "23oiuiowejwerjiowerjekliowe",
-    "content": "weljiwejfojeilwfjiowejfiojwelfweofjweiofjiowejf"
+    "title": "Our Mission",
+    "content": "To produce world-class films and provide professional fixing services while creating sustainable opportunities for Rwandan youth and women through comprehensive training and job creation in the film and animation industry."
   },
   "vision": {
-    "title": "woerweiorjweilrjiowejiowejieo",
-    "content": "wejlrhlefiowejfiojiojfiojiofjiweofjiowefjioj"
-  }
+    "title": "Our Vision",
+    "content": "To be East Africa's leading social enterprise in film production, recognized for both our creative excellence and our transformative impact on communities through media education and empowerment."
+  },
+  "differentiators": [
+    {
+      "icon": "💼",
+      "title": "Professional Excellence",
+      "description": "We deliver the same high-quality production and fixing services as any commercial film company, with experienced crews and international standards."
+    },
+    {
+      "icon": "❤️",
+      "title": "Social Impact",
+      "description": "Every project you do with us directly funds training programs for underprivileged youth and women, creating lasting change in communities."
+    },
+    {
+      "icon": "🌍",
+      "title": "Local Expertise",
+      "description": "As a locally-rooted organization, we bring authentic cultural understanding and deep community connections to every project."
+    },
+    {
+      "icon": "📈",
+      "title": "Sustainable Model",
+      "description": "Our social enterprise model ensures long-term sustainability for both our business operations and our training programs."
+    },
+    {
+      "icon": "🤝",
+      "title": "Partnership Approach",
+      "description": "We collaborate closely with international partners like Media Education Babelsberg to bring world-class training to Rwanda."
+    },
+    {
+      "icon": "🎓",
+      "title": "Proven Track Record",
+      "description": "Hundreds of creatives trained, multiple successful productions, and measurable impact on Rwanda's media landscape."
+    }
+  ],
+  "values": [
+    {
+      "title": "Excellence",
+      "description": "We maintain the highest professional standards in every project we undertake."
+    },
+    {
+      "title": "Empowerment",
+      "description": "We believe in creating opportunities that enable people to build sustainable careers."
+    },
+    {
+      "title": "Integrity",
+      "description": "We operate with transparency and honesty in all our business and training activities."
+    },
+    {
+      "title": "Collaboration",
+      "description": "We work together with communities, partners, and clients to achieve shared goals."
+    },
+    {
+      "title": "Innovation",
+      "description": "We continuously seek creative solutions to both production challenges and social needs."
+    },
+    {
+      "title": "Sustainability",
+      "description": "We build models that create lasting positive change for people and the industry."
+    }
+  ]
 }

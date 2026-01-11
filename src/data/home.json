@@ -6,7 +6,7 @@
     "cta1Text": "Production & Fixing Services",
     "cta1Link": "/services",
     "cta2Text": "Our Social Impact",
-    "cta2Link": "/impact"
+    "cta2Link": "/social-impact"
   },
   "whatWeDo": {
     "title": "What We Do",
@@ -59,6 +59,6 @@
       "🌱 Sustainable growth of Rwanda's media sector"
     ],
     "ctaText": "Learn About Our Impact",
-    "ctaLink": "/impact"
+    "ctaLink": "/social-impact"
   }
 }

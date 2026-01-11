@@ -1,0 +1,112 @@
+{
+  "hero": {
+    "title": "Our Social Impact",
+    "subtitle": "Transforming lives through film education and empowerment",
+    "image": "/images/training.jpg"
+  },
+  "intro": {
+    "title": "Creating Lasting Change",
+    "description": "As a social enterprise, MEB CBC reinvests **100% of our profits** from commercial film production and fixing services into training programs for youth and women. Our impact goes beyond numbers—we're building careers, empowering communities, and transforming Rwanda's creative industry."
+  },
+  "numbers": [
+    {
+      "number": "200+",
+      "label": "Creatives Trained",
+      "description": "Youth and women trained in professional film and animation production"
+    },
+    {
+      "number": "65%",
+      "label": "Women Participation",
+      "description": "Strong focus on empowering women in the creative industry"
+    },
+    {
+      "number": "80%",
+      "label": "Job Placement Rate",
+      "description": "Graduates securing employment or starting businesses within 6 months"
+    },
+    {
+      "number": "50+",
+      "label": "Projects Produced",
+      "description": "Films and animations created by training participants"
+    },
+    {
+      "number": "100%",
+      "label": "Profit Reinvestment",
+      "description": "All commercial profits fund free and subsidized training"
+    },
+    {
+      "number": "15+",
+      "label": "Partner Organizations",
+      "description": "NGOs and companies employing our graduates"
+    }
+  ],
+  "focusAreas": [
+    {
+      "title": "Youth Empowerment",
+      "icon": "👥",
+      "description": "Providing young Rwandans aged 18-35 with professional skills and career pathways in the creative industry. Priority given to those from underserved communities with limited access to such opportunities.",
+      "points": [
+        "Free foundation courses for disadvantaged youth",
+        "Mentorship programs",
+        "Job placement assistance",
+        "Alumni support network"
+      ]
+    },
+    {
+      "title": "Women in Film",
+      "icon": "👩",
+      "description": "Breaking down barriers for women in Rwanda's film industry through targeted training, mentorship, and opportunities. Currently 65% of our participants are women.",
+      "points": [
+        "Women-focused training cohorts",
+        "Female mentorship networks",
+        "Flexible training schedules",
+        "Childcare support where possible"
+      ]
+    },
+    {
+      "title": "Job Creation",
+      "icon": "💼",
+      "description": "Building sustainable livelihoods through direct employment, freelance opportunities, and entrepreneurship support in the creative sector.",
+      "points": [
+        "Employment on MEB CBC productions",
+        "Connections to industry partners",
+        "Business development support",
+        "Equipment access programs"
+      ]
+    },
+    {
+      "title": "Industry Development",
+      "icon": "🌱",
+      "description": "Contributing to the growth and professionalization of Rwanda's media and creative industry through quality training and international partnerships.",
+      "points": [
+        "International standard training",
+        "Industry partnerships",
+        "Knowledge sharing",
+        "Setting quality benchmarks"
+      ]
+    }
+  ],
+  "stories": [
+    {
+      "title": "From Unemployed to Film Producer",
+      "quote": "I had no job prospects after finishing school. MEB CBC's training gave me real skills. Now I run my own video production company and employ three other people.",
+      "author": "Marie Uwase, 28",
+      "role": "Film Producer | RMP Graduate 2023",
+      "image": "/images/training.jpg"
+    },
+    {
+      "title": "Breaking Barriers as a Female Cinematographer",
+      "quote": "People said cameras were 'men's work.' MEB CBC believed in me. Today, I'm the lead camera operator on major international productions filming in Rwanda.",
+      "author": "Divine Mukamazimpaka, 26",
+      "role": "Cinematographer | Working with International Crews",
+      "image": "/images/crew.jpg"
+    },
+    {
+      "title": "Rural Youth to Animation Studio Founder",
+      "quote": "Coming from a village, I never imagined I could work in animation. The free training changed my life. I now create animations that tell our Rwandan stories.",
+      "author": "Jean-Paul Niyonzima, 24",
+      "role": "Animator | Started Animation Studio in Musanze",
+      "image": "/images/animation-still-1.png"
+    }
+  ]
+}

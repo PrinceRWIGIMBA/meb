@@ -22,6 +22,9 @@ const currentPath = Astro.url.pathname;
         <li><a href="/services" class={currentPath === '/services' ? 'active' : ''}>Services</a></li>
         <li><a href="/animation" class={currentPath === '/animation' ? 'active' : ''}>Animation</a></li>
         <li><a href="/training" class={currentPath === '/training' ? 'active' : ''}>Training</a></li>
+          <li><a href="/games" class={currentPath === '/games' ? 'active' : ''}>
+          Games
+        </a></li>
         <li><a href="/social-impact" class={currentPath === '/social-impact' ? 'active' : ''}>Impact</a></li>
         <li><a href="/contact" class="btn btn-primary nav-cta">Contact</a></li>
       </ul>
@@ -53,17 +56,20 @@ const currentPath = Astro.url.pathname;
   }
   
   header:not(.scrolled) .nav-menu a:not(.btn) {
-    color: BLACK;
+    color: rgb(255, 255, 255);
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
   
   header:not(.scrolled) .logo img {
-    /* filter: brightness(0) invert(1); */
-    drop-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
   }
   
   header:not(.scrolled) .mobile-toggle span {
-    background: black;
+    background: white;
+  }
+  
+  header.scrolled .mobile-toggle span {
+    background: var(--primary);
   }
   
   .navbar {
@@ -112,7 +118,11 @@ const currentPath = Astro.url.pathname;
     width: 100%;
   }
   
-  .nav-menu a.active {
+  header:not(.scrolled) .nav-menu a.active:not(.btn) {
+    color: white;
+  }
+  
+  header.scrolled .nav-menu a.active {
     color: var(--accent);
   }
   
@@ -128,6 +138,7 @@ const currentPath = Astro.url.pathname;
     background: none;
     border: none;
     cursor: pointer;
+    padding: 0.5rem;
   }
   
   .mobile-toggle span {
@@ -159,6 +170,12 @@ const currentPath = Astro.url.pathname;
     .nav-menu.active {
       right: 0;
     }
+    
+    /* Ensure mobile menu links are always dark */
+    .nav-menu.active a:not(.btn) {
+      color: var(--text-dark) !important;
+      text-shadow: none !important;
+    }
   }
 </style>
 
@@ -167,6 +184,11 @@ const currentPath = Astro.url.pathname;
     const header = document.querySelector('header');
     const toggle = document.querySelector('.mobile-toggle');
     const menu = document.querySelector('.nav-menu');
+    
+    // Initial check on page load
+    if (window.scrollY > 100) {
+      header?.classList.add('scrolled');
+    }
     
     // Scroll effect for header
     window.addEventListener('scroll', () => {

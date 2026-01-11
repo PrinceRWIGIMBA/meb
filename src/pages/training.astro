@@ -1,13 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import trainingData from '../data/training.json';
+
+const { hero, intro, programs, curriculum, stats, testimonials } = trainingData;
 ---
 
 <Layout title="RMP Film Trainings" description="Rwanda Media Project - Professional film training in partnership with Media Education Babelsberg">
   <Hero 
-    title="Rwanda Media Project (RMP)"
-    subtitle="Professional film training in partnership with Media Education Babelsberg"
-    image="/images/crew.jpg"
+    title={hero.title}
+    subtitle={hero.subtitle}
+    image={hero.image}
     height="60vh"
   />
   
@@ -16,10 +19,9 @@ import Hero from '../components/Hero.astro';
     <div class="container">
       <div class="intro-grid">
         <div class="intro-content">
-          <h2>Building Rwanda's Film Industry</h2>
-          <p>MEB CBC collaborates with <strong>Media Education Babelsberg (Germany)</strong> to implement the Rwanda Media Project (RMP), providing comprehensive professional film training in Rwanda.</p>
-          
-          <p>This partnership brings world-class film education to aspiring Rwandan filmmakers, with a focus on empowering youth and women to build sustainable careers in the creative industry.</p>
+          <h2>{intro.title}</h2>
+          <p set:html={intro.description1.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')} />
+          <p>{intro.description2}</p>
           
           <div class="partnership-logos">
             <div class="partner">
@@ -35,7 +37,7 @@ import Hero from '../components/Hero.astro';
         </div>
         
         <div class="intro-image">
-          <img src="/images/training.jpg" alt="RMP Training Session">
+          <img src={intro.image} alt="RMP Training Session">
         </div>
       </div>
     </div>
@@ -50,61 +52,24 @@ import Hero from '../components/Hero.astro';
       </div>
       
       <div class="programs-grid">
-        <div class="program-card">
-          <div class="program-header">
-            <h3>Foundation Course</h3>
-            <span class="duration">12 Weeks</span>
+        {programs.map((program: any) => (
+          <div class={`program-card ${program.featured ? 'featured' : ''}`}>
+            {program.featured && <div class="program-badge">Most Popular</div>}
+            <div class="program-header">
+              <h3>{program.title}</h3>
+              <span class="duration">{program.duration}</span>
+            </div>
+            <p class="program-desc">{program.description}</p>
+            <ul class="program-modules">
+              {program.modules.map((module: string) => (
+                <li>{module}</li>
+              ))}
+            </ul>
+            <div class="program-footer">
+              <span class="fee">{program.fee}</span>
+            </div>
           </div>
-          <p class="program-desc">Introduction to filmmaking fundamentals for beginners with no prior experience.</p>
-          <ul class="program-modules">
-            <li>Camera operation & composition</li>
-            <li>Basic lighting techniques</li>
-            <li>Sound recording fundamentals</li>
-            <li>Introduction to editing</li>
-            <li>Storytelling basics</li>
-          </ul>
-          <div class="program-footer">
-            <span class="fee">Free for selected participants</span>
-          </div>
-        </div>
-        
-        <div class="program-card featured">
-          <div class="program-badge">Most Popular</div>
-          <div class="program-header">
-            <h3>Professional Certificate</h3>
-            <span class="duration">6 Months</span>
-          </div>
-          <p class="program-desc">Intensive professional training covering all aspects of film production.</p>
-          <ul class="program-modules">
-            <li>Advanced camera techniques</li>
-            <li>Professional lighting & grip</li>
-            <li>Location sound recording</li>
-            <li>Post-production workflow</li>
-            <li>Documentary filmmaking</li>
-            <li>Project portfolio development</li>
-          </ul>
-          <div class="program-footer">
-            <span class="fee">Subsidized tuition available</span>
-          </div>
-        </div>
-        
-        <div class="program-card">
-          <div class="program-header">
-            <h3>Specialized Workshops</h3>
-            <span class="duration">1-4 Weeks</span>
-          </div>
-          <p class="program-desc">Focused training on specific filmmaking disciplines and techniques.</p>
-          <ul class="program-modules">
-            <li>Color grading</li>
-            <li>Sound design & mixing</li>
-            <li>Drone cinematography</li>
-            <li>Interview techniques</li>
-            <li>Documentary ethics</li>
-          </ul>
-          <div class="program-footer">
-            <span class="fee">Various pricing options</span>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </section>
@@ -169,49 +134,17 @@ import Hero from '../components/Hero.astro';
       </div>
       
       <div class="curriculum-grid">
-        <div class="curriculum-category">
-          <div class="category-icon">📹</div>
-          <h4>Production</h4>
-          <ul>
-            <li>Camera operation</li>
-            <li>Lighting design</li>
-            <li>Sound recording</li>
-            <li>Directing techniques</li>
-          </ul>
-        </div>
-        
-        <div class="curriculum-category">
-          <div class="category-icon">✂️</div>
-          <h4>Post-Production</h4>
-          <ul>
-            <li>Video editing</li>
-            <li>Color correction</li>
-            <li>Sound mixing</li>
-            <li>Motion graphics</li>
-          </ul>
-        </div>
-        
-        <div class="curriculum-category">
-          <div class="category-icon">📖</div>
-          <h4>Storytelling</h4>
-          <ul>
-            <li>Narrative structure</li>
-            <li>Documentary approach</li>
-            <li>Character development</li>
-            <li>Visual storytelling</li>
-          </ul>
-        </div>
-        
-        <div class="curriculum-category">
-          <div class="category-icon">💼</div>
-          <h4>Professional Skills</h4>
-          <ul>
-            <li>Project management</li>
-            <li>Client communication</li>
-            <li>Budget planning</li>
-            <li>Industry standards</li>
-          </ul>
-        </div>
+        {curriculum.map((cat: any) => (
+          <div class="curriculum-category">
+            <div class="category-icon">{cat.icon}</div>
+            <h4>{cat.category}</h4>
+            <ul>
+              {cat.items.map((item: string) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -224,42 +157,21 @@ import Hero from '../components/Hero.astro';
       </div>
       
       <div class="success-grid">
-        <div class="success-stat">
-          <h3>200+</h3>
-          <p>Creatives Trained</p>
-        </div>
-        
-        <div class="success-stat">
-          <h3>65%</h3>
-          <p>Women Participants</p>
-        </div>
-        
-        <div class="success-stat">
-          <h3>80%</h3>
-          <p>Job Placement Rate</p>
-        </div>
-        
-        <div class="success-stat">
-          <h3>50+</h3>
-          <p>Student Films Produced</p>
-        </div>
+        {stats.map((stat: any) => (
+          <div class="success-stat">
+            <h3>{stat.number}</h3>
+            <p>{stat.label}</p>
+          </div>
+        ))}
       </div>
       
       <div class="testimonials">
-        <div class="testimonial">
-          <p class="quote">"The RMP training gave me skills I never imagined I could have. Now I'm working as a camera operator on international productions."</p>
-          <div class="author">— Emmanuel, RMP Graduate 2023</div>
-        </div>
-        
-        <div class="testimonial">
-          <p class="quote">"As a young woman from a rural area, this opportunity changed everything for me. I now run my own video production business."</p>
-          <div class="author">— Divine, Filmmaker & Entrepreneur</div>
-        </div>
-        
-        <div class="testimonial">
-          <p class="quote">"The instructors treated us like professionals from day one. That confidence has stayed with me throughout my career."</p>
-          <div class="author">— Patrick, Documentary Filmmaker</div>
-        </div>
+        {testimonials.map((testimonial: any) => (
+          <div class="testimonial">
+            <p class="quote">"{testimonial.quote}"</p>
+            <div class="author">— {testimonial.author}</div>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -325,6 +237,7 @@ import Hero from '../components/Hero.astro';
 </Layout>
 
 <style>
+  /* Copy all your existing styles from training.astro - keeping them exactly the same */
   .rmp-intro {
     padding: 5rem 0;
     background: #f8f9fa;

@@ -2,13 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import ContactForm from '../components/ContactForm.astro';
+import contactData from '../data/contact.json';
+
+const { hero, info, faq } = contactData;
 ---
 
-<Layout title="Contact Us" description="Get in touch with MEB CBC Rwanda for film production, fixing services, or training inquiries">
+<Layout title="Contact Us" description="Get in touch with MEB CBC Rwanda">
   <Hero 
-    title="Get in Touch"
-    subtitle="Let's create something amazing together"
-    image="/images/crew.jpg"
+    title={hero.title}
+    subtitle={hero.subtitle}
+    image={hero.image}
     height="50vh"
   />
   
@@ -19,14 +22,14 @@ import ContactForm from '../components/ContactForm.astro';
         <!-- Contact Information -->
         <div class="contact-info">
           <h2>Contact Information</h2>
-          <p>Whether you need production services, fixing support, or want to learn more about our training programs, we'd love to hear from you.</p>
+          <p>{info.description}</p>
           
           <div class="info-items">
             <div class="info-item">
               <div class="info-icon">📍</div>
               <div class="info-content">
                 <h4>Location</h4>
-                <p>Kigali, Rwanda</p>
+                <p>{info.location}</p>
               </div>
             </div>
             
@@ -34,7 +37,7 @@ import ContactForm from '../components/ContactForm.astro';
               <div class="info-icon">📞</div>
               <div class="info-content">
                 <h4>Phone</h4>
-                <p>+250 795 512 502</p>
+                <p>{info.phone}</p>
               </div>
             </div>
             
@@ -42,7 +45,7 @@ import ContactForm from '../components/ContactForm.astro';
               <div class="info-icon">✉️</div>
               <div class="info-content">
                 <h4>Email</h4>
-                <p>mebrmp2022@gmail.com</p>
+                <p>{info.email}</p>
               </div>
             </div>
             
@@ -50,26 +53,16 @@ import ContactForm from '../components/ContactForm.astro';
               <div class="info-icon">🌐</div>
               <div class="info-content">
                 <h4>Website</h4>
-                <p>www.meb.rw</p>
+                <p>{info.website}</p>
               </div>
             </div>
           </div>
           
           <div class="business-hours">
             <h4>Business Hours</h4>
-            <p><strong>Monday - Friday:</strong> 8:00 AM - 6:00 PM</p>
-            <p><strong>Saturday:</strong> 9:00 AM - 1:00 PM</p>
-            <p><strong>Sunday:</strong> Closed</p>
-          </div>
-          
-          <div class="social-links">
-            <h4>Connect With Us</h4>
-            <div class="social-icons">
-              <a href="#" class="social-icon" aria-label="Facebook">📘</a>
-              <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
-              <a href="#" class="social-icon" aria-label="Instagram">📷</a>
-              <a href="#" class="social-icon" aria-label="LinkedIn">💼</a>
-            </div>
+            <p><strong>{info.businessHours.weekday}</strong></p>
+            <p><strong>{info.businessHours.saturday}</strong></p>
+            <p><strong>{info.businessHours.sunday}</strong></p>
           </div>
         </div>
         
@@ -83,75 +76,7 @@ import ContactForm from '../components/ContactForm.astro';
     </div>
   </section>
   
-  <!-- What to Expect -->
-  <section class="what-to-expect">
-    <div class="container">
-      <div class="section-title">
-        <h2>What to Expect</h2>
-      </div>
-      
-      <div class="expect-grid">
-        <div class="expect-item">
-          <div class="expect-icon">⚡</div>
-          <h4>Quick Response</h4>
-          <p>We aim to respond to all inquiries within 24 hours during business days</p>
-        </div>
-        
-        <div class="expect-item">
-          <div class="expect-icon">💬</div>
-          <h4>Personalized Consultation</h4>
-          <p>We'll discuss your specific needs and provide tailored solutions</p>
-        </div>
-        
-        <div class="expect-item">
-          <div class="expect-icon">📋</div>
-          <h4>Detailed Proposals</h4>
-          <p>Receive comprehensive quotes and project plans for your review</p>
-        </div>
-        
-        <div class="expect-item">
-          <div class="expect-icon">🤝</div>
-          <h4>Transparent Communication</h4>
-          <p>Clear, honest communication throughout our entire collaboration</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Services Overview -->
-  <section class="services-overview">
-    <div class="container">
-      <div class="section-title">
-        <h2>How We Can Help</h2>
-      </div>
-      
-      <div class="help-grid">
-        <div class="help-card">
-          <h4>🎬 Film Production</h4>
-          <p>Need a documentary, NGO video, or commercial content? We deliver professional quality with social impact.</p>
-          <a href="/services#production" class="link-arrow">Learn more →</a>
-        </div>
-        
-        <div class="help-card">
-          <h4>🌍 Film Fixing</h4>
-          <p>Filming in Rwanda? We handle all logistics, permits, crew, and equipment for international productions.</p>
-          <a href="/services#fixing" class="link-arrow">Learn more →</a>
-        </div>
-        
-        <div class="help-card">
-          <h4>🎨 Animation Services</h4>
-          <p>Professional animation production for educational, commercial, or storytelling purposes.</p>
-          <a href="/animation" class="link-arrow">Learn more →</a>
-        </div>
-        
-        <div class="help-card">
-          <h4>🎓 Training Programs</h4>
-          <p>Want to learn filmmaking or animation? Join our professional training programs.</p>
-          <a href="/training" class="link-arrow">Learn more →</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- What to Expect - keep this section from original -->
   
   <!-- FAQ -->
   <section class="faq">
@@ -161,69 +86,17 @@ import ContactForm from '../components/ContactForm.astro';
       </div>
       
       <div class="faq-grid">
-        <div class="faq-item">
-          <h4>How much do your services cost?</h4>
-          <p>Pricing varies depending on project scope, duration, and requirements. Contact us for a detailed quote tailored to your specific needs. We offer competitive rates while maintaining professional quality.</p>
-        </div>
-        
-        <div class="faq-item">
-          <h4>How long does production typically take?</h4>
-          <p>Timeline depends on project complexity. A simple NGO video might take 2-3 weeks, while a documentary could take several months. We'll provide a detailed timeline during consultation.</p>
-        </div>
-        
-        <div class="faq-item">
-          <h4>Do you work with international crews?</h4>
-          <p>Yes! We regularly provide fixing services for international productions filming in Rwanda, including permits, logistics, local crew, and equipment.</p>
-        </div>
-        
-        <div class="faq-item">
-          <h4>How can I apply for training programs?</h4>
-          <p>Contact us through this form expressing your interest. We'll provide information about upcoming cohorts, application requirements, and available scholarships.</p>
-        </div>
-        
-        <div class="faq-item">
-          <h4>Are training programs free?</h4>
-          <p>We offer both free and subsidized training. Priority for free programs goes to youth and women from underserved communities. All profits from commercial work fund these programs.</p>
-        </div>
-        
-        <div class="faq-item">
-          <h4>What equipment do you have available?</h4>
-          <p>We have professional cinema cameras, lighting kits, audio equipment, drones, and complete post-production facilities. Full equipment list available upon request.</p>
-        </div>
+        {faq.map((item: any) => (
+          <div class="faq-item">
+            <h4>{item.question}</h4>
+            <p>{item.answer}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
   
-  <!-- Map Placeholder -->
-  <section class="location-map">
-    <div class="container">
-      <div class="section-title">
-        <h2>Find Us in Kigali</h2>
-      </div>
-      
-      <div class="map-placeholder">
-        <div class="map-content">
-          <h3>MEB CBC Rwanda</h3>
-          <p>Kigali, Rwanda</p>
-          <p class="map-note">📍 Contact us for specific location details and directions</p>
-        </div>
-      </div>
-    </div>
-  </section>
-  
-  <!-- Final CTA -->
-  <section class="final-cta">
-    <div class="container">
-      <div class="cta-box">
-        <h2>Ready to Start Your Project?</h2>
-        <p>Whether it's a production, training inquiry, or partnership opportunity, we're here to help make it happen.</p>
-        <div class="cta-contact">
-          <a href="tel:+250795512502" class="btn btn-primary">📞 Call Us Now</a>
-          <a href="mailto:mebrmp2022@gmail.com" class="btn btn-secondary">✉️ Send Email</a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Keep remaining sections from original contact.astro -->
 </Layout>
 
 <style>

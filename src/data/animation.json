@@ -1,0 +1,75 @@
+{
+  "hero": {
+    "title": "Animation & Workshops",
+    "subtitle": "Creating stories through animation and empowering creative talent",
+    "image": "/images/animation-still-1.png"
+  },
+  "intro": {
+    "title": "Animation Production & Training",
+    "description": "We offer professional animation production services while simultaneously running comprehensive animation workshops focused on youth and women. Income from our commercial animation projects directly supports free and subsidized training programs.",
+    "description2": "Our animation work combines storytelling with social impact, creating content that entertains, educates, and empowers both the audience and the creators behind it.",
+    "image": "/images/animation-still-2.png",
+    "stats": [
+      { "number": "50+", "label": "Animation Trainees" },
+      { "number": "20+", "label": "Completed Projects" },
+      { "number": "15+", "label": "Workshop Sessions" }
+    ]
+  },
+  "services": [
+    {
+      "title": "2D Animation",
+      "icon": "🎨",
+      "description": "Character animation, explainer videos, and educational content using industry-standard software and techniques."
+    },
+    {
+      "title": "Animated Shorts",
+      "icon": "🎬",
+      "description": "Story-driven animated films that capture local narratives, culture, and important social messages."
+    },
+    {
+      "title": "Educational Animation",
+      "icon": "📚",
+      "description": "Engaging animated content for NGOs, educational institutions, and public awareness campaigns."
+    },
+    {
+      "title": "Animation Workshops",
+      "icon": "🎓",
+      "description": "Hands-on training programs teaching animation fundamentals, storytelling, and production workflows."
+    }
+  ],
+  "workshop": {
+    "title": "Animation Workshop Programs",
+    "subtitle": "Building skills and creating opportunities",
+    "description": "Our animation workshops are designed for:",
+    "participants": [
+      "Youth aged 18-30 interested in animation careers",
+      "Women seeking creative industry skills",
+      "Film and media students",
+      "Creative professionals expanding their skills",
+      "Community storytellers and artists"
+    ],
+    "features": [
+      "Character Design & Development",
+      "Storyboarding & Visual Storytelling",
+      "Animation Production Workflow",
+      "Industry Software (Toon Boom, Adobe)",
+      "Color Theory & Visual Design",
+      "Sound & Voice Integration"
+    ],
+    "image": "/images/training.jpg"
+  },
+  "testimonials": [
+    {
+      "quote": "The animation training opened doors I never knew existed. Now I'm working on projects for international clients.",
+      "author": "Marie, Animation Graduate 2023"
+    },
+    {
+      "quote": "Learning animation here changed my life. I can now tell our stories in ways that reach wider audiences.",
+      "author": "Jean-Paul, Animator & Storyteller"
+    },
+    {
+      "quote": "As a woman in tech and creative arts, this program gave me both skills and confidence to pursue my passion professionally.",
+      "author": "Grace, Animation Studio Founder"
+    }
+  ]
+}

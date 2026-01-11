@@ -1,0 +1,127 @@
+{
+  "hero": {
+    "title": "Production & Fixing Services",
+    "subtitle": "Professional film services for local and international clients",
+    "image": "/images/crew.jpg"
+  },
+  "production": [
+    {
+      "title": "Documentary Films",
+      "icon": "🎥",
+      "description": "Compelling documentary storytelling that captures authentic voices and important narratives.",
+      "services": [
+        "Research and story development",
+        "Multi-camera filming",
+        "Interview setups and lighting",
+        "Post-production and delivery"
+      ]
+    },
+    {
+      "title": "NGO & Institutional Videos",
+      "icon": "🏢",
+      "description": "Professional videos that communicate your organization's mission and impact effectively.",
+      "services": [
+        "Program documentation",
+        "Impact stories and testimonials",
+        "Training and educational videos",
+        "Event coverage"
+      ]
+    },
+    {
+      "title": "Photography & Videography",
+      "icon": "📸",
+      "description": "High-quality visual content for marketing, documentation, and storytelling purposes.",
+      "services": [
+        "Commercial photography",
+        "Event documentation",
+        "Promotional videos",
+        "Aerial drone footage"
+      ]
+    },
+    {
+      "title": "Editing & Post-Production",
+      "icon": "✂️",
+      "description": "Professional editing, color grading, and sound design to bring your vision to life.",
+      "services": [
+        "Video editing and assembly",
+        "Color grading and correction",
+        "Sound design and mixing",
+        "Motion graphics and titles"
+      ]
+    }
+  ],
+  "fixing": [
+    {
+      "title": "Location Scouting",
+      "icon": "🗺️",
+      "description": "Expert knowledge of Rwanda's diverse filming locations, from urban centers to remote villages."
+    },
+    {
+      "title": "Permits & Coordination",
+      "icon": "📋",
+      "description": "Full coordination with government agencies, local authorities, and community stakeholders."
+    },
+    {
+      "title": "Local Crew Sourcing",
+      "icon": "👥",
+      "description": "Access to experienced local crew members including camera operators, sound technicians, and production assistants."
+    },
+    {
+      "title": "Equipment & Logistics",
+      "icon": "🎬",
+      "description": "Professional equipment rental and complete logistics support including transportation and accommodation."
+    },
+    {
+      "title": "Cultural Mediation",
+      "icon": "🤝",
+      "description": "Cultural consultation and translation services to ensure respectful and effective community engagement."
+    },
+    {
+      "title": "Safeguarding",
+      "icon": "🛡️",
+      "description": "Comprehensive safeguarding protocols for vulnerable populations, particularly children and at-risk communities."
+    }
+  ],
+  "equipment": [
+    {
+      "category": "Cameras",
+      "icon": "📹",
+      "items": [
+        "Professional cinema cameras",
+        "4K broadcast cameras",
+        "Drone cameras",
+        "Action cameras"
+      ]
+    },
+    {
+      "category": "Audio",
+      "icon": "🎤",
+      "items": [
+        "Shotgun microphones",
+        "Wireless lav systems",
+        "Audio recorders",
+        "Boom poles and accessories"
+      ]
+    },
+    {
+      "category": "Lighting",
+      "icon": "💡",
+      "items": [
+        "LED panel lights",
+        "Softboxes and modifiers",
+        "Battery-powered lights",
+        "Reflectors and flags"
+      ]
+    },
+    {
+      "category": "Support",
+      "icon": "🎬",
+      "items": [
+        "Professional tripods",
+        "Gimbals and stabilizers",
+        "Sliders and jibs",
+        "Monitors and playback"
+      ]
+    }
+  ]
+}

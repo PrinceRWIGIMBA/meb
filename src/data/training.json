@@ -1,0 +1,120 @@
+{
+  "hero": {
+    "title": "Rwanda Media Project (RMP)",
+    "subtitle": "Professional film training in partnership with Media Education Babelsberg",
+    "image": "/images/crew.jpg"
+  },
+  "intro": {
+    "title": "Building Rwanda's Film Industry",
+    "description1": "MEB CBC collaborates with **Media Education Babelsberg (Germany)** to implement the Rwanda Media Project (RMP), providing comprehensive professional film training in Rwanda.",
+    "description2": "This partnership brings world-class film education to aspiring Rwandan filmmakers, with a focus on empowering youth and women to build sustainable careers in the creative industry.",
+    "image": "/images/training.jpg"
+  },
+  "programs": [
+    {
+      "title": "Foundation Course",
+      "duration": "12 Weeks",
+      "description": "Introduction to filmmaking fundamentals for beginners with no prior experience.",
+      "modules": [
+        "Camera operation & composition",
+        "Basic lighting techniques",
+        "Sound recording fundamentals",
+        "Introduction to editing",
+        "Storytelling basics"
+      ],
+      "fee": "Free for selected participants",
+      "featured": false
+    },
+    {
+      "title": "Professional Certificate",
+      "duration": "6 Months",
+      "description": "Intensive professional training covering all aspects of film production.",
+      "modules": [
+        "Advanced camera techniques",
+        "Professional lighting & grip",
+        "Location sound recording",
+        "Post-production workflow",
+        "Documentary filmmaking",
+        "Project portfolio development"
+      ],
+      "fee": "Subsidized tuition available",
+      "featured": true
+    },
+    {
+      "title": "Specialized Workshops",
+      "duration": "1-4 Weeks",
+      "description": "Focused training on specific filmmaking disciplines and techniques.",
+      "modules": [
+        "Color grading",
+        "Sound design & mixing",
+        "Drone cinematography",
+        "Interview techniques",
+        "Documentary ethics"
+      ],
+      "fee": "Various pricing options",
+      "featured": false
+    }
+  ],
+  "curriculum": [
+    {
+      "category": "Production",
+      "icon": "📹",
+      "items": [
+        "Camera operation",
+        "Lighting design",
+        "Sound recording",
+        "Directing techniques"
+      ]
+    },
+    {
+      "category": "Post-Production",
+      "icon": "✂️",
+      "items": [
+        "Video editing",
+        "Color correction",
+        "Sound mixing",
+        "Motion graphics"
+      ]
+    },
+    {
+      "category": "Storytelling",
+      "icon": "📖",
+      "items": [
+        "Narrative structure",
+        "Documentary approach",
+        "Character development",
+        "Visual storytelling"
+      ]
+    },
+    {
+      "category": "Professional Skills",
+      "icon": "💼",
+      "items": [
+        "Project management",
+        "Client communication",
+        "Budget planning",
+        "Industry standards"
+      ]
+    }
+  ],
+  "stats": [
+    { "number": "200+", "label": "Creatives Trained" },
+    { "number": "65%", "label": "Women Participants" },
+    { "number": "80%", "label": "Job Placement Rate" },
+    { "number": "50+", "label": "Student Films Produced" }
+  ],
+  "testimonials": [
+    {
+      "quote": "The RMP training gave me skills I never imagined I could have. Now I'm working as a camera operator on international productions.",
+      "author": "Emmanuel, RMP Graduate 2023"
+    },
+    {
+      "quote": "As a young woman from a rural area, this opportunity changed everything for me. I now run my own video production business.",
+      "author": "Divine, Filmmaker & Entrepreneur"
+    },
+    {
+      "quote": "The instructors treated us like professionals from day one. That confidence has stayed with me throughout my career.",
+      "author": "Patrick, Documentary Filmmaker"
+    }
+  ]
+}

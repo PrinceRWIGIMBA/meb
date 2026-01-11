@@ -3,63 +3,79 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import GalleryItem from '../components/GalleryItem.astro';
+import homeData from '../data/home.json';
+
+const { hero, whatWeDo, socialModel } = homeData;
+
+// Portfolio items (you can add these later through CMS)
+const portfolioItems = [
+  {
+    image: "/images/lake-women-1.jpg",
+    title: "Lake Women Documentary",
+    description: "A powerful documentary highlighting the lives and stories of women working around Rwanda's lakes.",
+    videoLink: "#"
+  },
+  {
+    image: "/images/isano.jpg",
+    title: "Isano Animation",
+    description: "An animated film created through our training program, showcasing local stories and culture.",
+    videoLink: "#"
+  },
+  {
+    image: "/images/animation-still-1.png",
+    title: "Nyiragitwa Animation",
+    description: "Community-focused animation project developed with youth participants.",
+    videoLink: "#"
+  },
+  {
+    image: "/images/animation-still-2.png",
+    title: "Bwiza Animation",
+    description: "Cultural storytelling through animation, produced by our training graduates.",
+    videoLink: "#"
+  },
+  {
+    image: "/images/lake-women-2.jpg",
+    title: "Community Stories",
+    description: "Documentary series capturing authentic voices from communities across Rwanda.",
+    videoLink: "#"
+  },
+  {
+    image: "/images/crew.jpg",
+    title: "Behind the Scenes",
+    description: "Professional production work with international and local crews.",
+    videoLink: "#"
+  }
+];
 ---
 
 <Layout title="Home">
   <Hero 
-    title="Film Production & Fixing Services in Rwanda"
-    subtitle="A social enterprise producing films and reinvesting profits into training youth and women."
-    image="/images/crew2.jpg"
-    cta1Text="Production & Fixing Services"
-    cta1Link="/services"
-    cta2Text="Our Social Impact"
-    cta2Link="/social-impact"
+    title={hero.title}
+    subtitle={hero.subtitle}
+    image={hero.image}
+    cta1Text={hero.cta1Text}
+    cta1Link={hero.cta1Link}
+    cta2Text={hero.cta2Text}
+    cta2Link={hero.cta2Link}
   />
   
   <!-- What We Do Section -->
   <section class="what-we-do">
     <div class="container">
       <div class="section-title">
-        <h2>What We Do</h2>
-        <p>Professional film services with a social mission</p>
+        <h2>{whatWeDo.title}</h2>
+        <p>{whatWeDo.subtitle}</p>
       </div>
       
       <div class="grid grid-3">
-        <ServiceCard 
-          title="Film Production"
-          icon="🎬"
-          description="Professional documentary films, NGO videos, and commercial content production."
-          services={[
-            "Documentary Films",
-            "NGO & Institutional Videos",
-            "Photography & Videography",
-            "Editing & Post-Production"
-          ]}
-        />
-        
-        <ServiceCard 
-          title="Film Fixing"
-          icon="🌍"
-          description="Complete production support for international crews filming in Rwanda."
-          services={[
-            "Location Scouting",
-            "Film Permits & Coordination",
-            "Local Crew Sourcing",
-            "Equipment & Logistics"
-          ]}
-        />
-        
-        <ServiceCard 
-          title="Animation & Training"
-          icon="✨"
-          description="Animation production and professional training programs for youth and women."
-          services={[
-            "2D/3D Animation",
-            "Animation Workshops",
-            "Film Training Programs",
-            "Youth Empowerment"
-          ]}
-        />
+        {whatWeDo.services.map((service: any) => (
+          <ServiceCard 
+            title={service.title}
+            icon={service.icon}
+            description={service.description}
+            services={service.servicesList}
+          />
+        ))}
       </div>
     </div>
   </section>
@@ -69,19 +85,17 @@ import GalleryItem from '../components/GalleryItem.astro';
     <div class="container">
       <div class="model-content">
         <div class="model-text">
-          <h2>Our Social Enterprise Model</h2>
-          <p>MEB CBC operates as a social enterprise where <strong>100% of profits</strong> from our commercial film production and fixing services are reinvested into:</p>
+          <h2>{socialModel.title}</h2>
+          <p set:html={socialModel.description} />
           <ul class="impact-list">
-            <li>🎓 Free and subsidized training programs</li>
-            <li>👥 Professional development for youth and women</li>
-            <li>🎨 Animation workshops and creative skills development</li>
-            <li>💼 Job creation in the creative industry</li>
-            <li>🌱 Sustainable growth of Rwanda's media sector</li>
+            {socialModel.impactPoints.map((point: string) => (
+              <li>{point}</li>
+            ))}
           </ul>
-          <a href="/social-impact" class="btn btn-primary">Learn About Our Impact</a>
+          <a href={socialModel.ctaLink} class="btn btn-primary">{socialModel.ctaText}</a>
         </div>
         <div class="model-image">
-          <img src="/images/training.jpg" alt="Training Workshop">
+          <img src={socialModel.image} alt="Training Workshop">
         </div>
       </div>
     </div>
@@ -96,47 +110,14 @@ import GalleryItem from '../components/GalleryItem.astro';
       </div>
       
       <div class="grid grid-3">
-        <GalleryItem 
-          image="/images/lake-women-1.jpg"
-          title="Lake Women Documentary"
-          description="A powerful documentary highlighting the lives and stories of women working around Rwanda's lakes."
-          videoLink="#"
-        />
-        
-        <GalleryItem 
-          image="/images/isano.jpg"
-          title="Isano Animation"
-          description="An animated film created through our training program, showcasing local stories and culture."
-          videoLink="#"
-        />
-        
-        <GalleryItem 
-          image="/images/animation-still-1.png"
-          title="Nyiragitwa Animation"
-          description="Community-focused animation project developed with youth participants."
-          videoLink="#"
-        />
-        
-        <GalleryItem 
-          image="/images/animation-still-2.png"
-          title="Bwiza Animation"
-          description="Cultural storytelling through animation, produced by our training graduates."
-          videoLink="#"
-        />
-        
-        <GalleryItem 
-          image="/images/lake-women-2.jpg"
-          title="Community Stories"
-          description="Documentary series capturing authentic voices from communities across Rwanda."
-          videoLink="#"
-        />
-        
-        <GalleryItem 
-          image="/images/crew.jpg"
-          title="Behind the Scenes"
-          description="Professional production work with international and local crews."
-          videoLink="#"
-        />
+        {portfolioItems.map((item) => (
+          <GalleryItem 
+            image={item.image}
+            title={item.title}
+            description={item.description}
+            videoLink={item.videoLink}
+          />
+        ))}
       </div>
       
       <div class="text-center mt-3">
@@ -253,21 +234,3 @@ import GalleryItem from '../components/GalleryItem.astro';
     }
   }
 </style>
-
-	<script>
-			declare global {
-				interface Window {
-					netlifyIdentity: any;
-				}
-			}
-
-			if (window.netlifyIdentity) {
-			  window.netlifyIdentity.on("init", ((user: any) => {
-				if (!user) {
-				  window.netlifyIdentity.on("login", () => {
-					document.location.href = "/admin/";
-				  });
-				}
-			  }));
-			}
-		  </script>

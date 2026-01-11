@@ -2,13 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
+import servicesData from '../data/services.json';
+
+const { hero, production, fixing, equipment } = servicesData;
 ---
 
 <Layout title="Production & Fixing Services" description="Professional film production and fixing services in Rwanda">
   <Hero 
-    title="Production & Fixing Services"
-    subtitle="Professional film services for local and international clients"
-    image="/images/crew.jpg"
+    title={hero.title}
+    subtitle={hero.subtitle}
+    image={hero.image}
     height="60vh"
   />
   
@@ -31,53 +34,14 @@ import ServiceCard from '../components/ServiceCard.astro';
       </div>
       
       <div class="grid grid-2">
-        <ServiceCard 
-          title="Documentary Films"
-          icon="🎥"
-          description="Compelling documentary storytelling that captures authentic voices and important narratives."
-          services={[
-            "Research and story development",
-            "Multi-camera filming",
-            "Interview setups and lighting",
-            "Post-production and delivery"
-          ]}
-        />
-        
-        <ServiceCard 
-          title="NGO & Institutional Videos"
-          icon="🏢"
-          description="Professional videos that communicate your organization's mission and impact effectively."
-          services={[
-            "Program documentation",
-            "Impact stories and testimonials",
-            "Training and educational videos",
-            "Event coverage"
-          ]}
-        />
-        
-        <ServiceCard 
-          title="Photography & Videography"
-          icon="📸"
-          description="High-quality visual content for marketing, documentation, and storytelling purposes."
-          services={[
-            "Commercial photography",
-            "Event documentation",
-            "Promotional videos",
-            "Aerial drone footage"
-          ]}
-        />
-        
-        <ServiceCard 
-          title="Editing & Post-Production"
-          icon="✂️"
-          description="Professional editing, color grading, and sound design to bring your vision to life."
-          services={[
-            "Video editing and assembly",
-            "Color grading and correction",
-            "Sound design and mixing",
-            "Motion graphics and titles"
-          ]}
-        />
+        {production.map((service: any) => (
+          <ServiceCard 
+            title={service.title}
+            icon={service.icon}
+            description={service.description}
+            services={service.services}
+          />
+        ))}
       </div>
     </div>
   </section>
@@ -95,41 +59,13 @@ import ServiceCard from '../components/ServiceCard.astro';
       </div>
       
       <div class="grid grid-3">
-        <ServiceCard 
-          title="Location Scouting"
-          icon="🗺️"
-          description="Expert knowledge of Rwanda's diverse filming locations, from urban centers to remote villages."
-        />
-        
-        <ServiceCard 
-          title="Permits & Coordination"
-          icon="📋"
-          description="Full coordination with government agencies, local authorities, and community stakeholders."
-        />
-        
-        <ServiceCard 
-          title="Local Crew Sourcing"
-          icon="👥"
-          description="Access to experienced local crew members including camera operators, sound technicians, and production assistants."
-        />
-        
-        <ServiceCard 
-          title="Equipment & Logistics"
-          icon="🎬"
-          description="Professional equipment rental and complete logistics support including transportation and accommodation."
-        />
-        
-        <ServiceCard 
-          title="Cultural Mediation"
-          icon="🤝"
-          description="Cultural consultation and translation services to ensure respectful and effective community engagement."
-        />
-        
-        <ServiceCard 
-          title="Safeguarding"
-          icon="🛡️"
-          description="Comprehensive safeguarding protocols for vulnerable populations, particularly children and at-risk communities."
-        />
+        {fixing.map((service: any) => (
+          <ServiceCard 
+            title={service.title}
+            icon={service.icon}
+            description={service.description}
+          />
+        ))}
       </div>
     </div>
   </section>
@@ -178,45 +114,16 @@ import ServiceCard from '../components/ServiceCard.astro';
       </div>
       
       <div class="equipment-grid">
-        <div class="equipment-category">
-          <h4>📹 Cameras</h4>
-          <ul>
-            <li>Professional cinema cameras</li>
-            <li>4K broadcast cameras</li>
-            <li>Drone cameras</li>
-            <li>Action cameras</li>
-          </ul>
-        </div>
-        
-        <div class="equipment-category">
-          <h4>🎤 Audio</h4>
-          <ul>
-            <li>Shotgun microphones</li>
-            <li>Wireless lav systems</li>
-            <li>Audio recorders</li>
-            <li>Boom poles and accessories</li>
-          </ul>
-        </div>
-        
-        <div class="equipment-category">
-          <h4>💡 Lighting</h4>
-          <ul>
-            <li>LED panel lights</li>
-            <li>Softboxes and modifiers</li>
-            <li>Battery-powered lights</li>
-            <li>Reflectors and flags</li>
-          </ul>
-        </div>
-        
-        <div class="equipment-category">
-          <h4>🎬 Support</h4>
-          <ul>
-            <li>Professional tripods</li>
-            <li>Gimbals and stabilizers</li>
-            <li>Sliders and jibs</li>
-            <li>Monitors and playback</li>
-          </ul>
-        </div>
+        {equipment.map((category: any) => (
+          <div class="equipment-category">
+            <h4>{category.icon} {category.category}</h4>
+            <ul>
+              {category.items.map((item: string) => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        ))}
       </div>
     </div>
   </section>

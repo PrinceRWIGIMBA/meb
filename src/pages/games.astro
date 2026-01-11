@@ -1,0 +1,495 @@
+---
+import Layout from '../layouts/Layout.astro';
+import gamesData from '../data/games.json';
+
+const { hero, comingSoon, newsletter, preview } = gamesData;
+---
+
+<Layout title="Games - Coming Soon" description="Interactive educational games coming soon from MEB CBC Rwanda">
+  <!-- Hero Section -->
+  <section class="games-hero">
+    <div class="hero-background">
+      <img src={hero.image} alt="Games">
+      <div class="hero-overlay"></div>
+      <div class="animated-particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+      </div>
+    </div>
+    
+    <div class="hero-content">
+      <div class="container">
+        <div class="status-badge">{hero.status}</div>
+        <h1 class="hero-title">{hero.title}</h1>
+        <p class="hero-subtitle">{hero.subtitle}</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Coming Soon Main -->
+  <section class="coming-soon-main">
+    <div class="container">
+      <div class="main-content">
+        <div class="countdown-wrapper">
+          <h2>{comingSoon.mainTitle}</h2>
+          <div class="launch-year">{comingSoon.launchDate}</div>
+          <p class="description">{comingSoon.description}</p>
+        </div>
+        
+        <div class="features-grid">
+          {comingSoon.features.map((feature: any) => (
+            <div class="feature-card">
+              <div class="feature-icon">{feature.icon}</div>
+              <h3>{feature.title}</h3>
+              <p>{feature.description}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Newsletter Signup -->
+  <section class="newsletter-section">
+    <div class="container">
+      <div class="newsletter-box">
+        <h2>{newsletter.title}</h2>
+        <p>{newsletter.description}</p>
+        <form class="newsletter-form" id="gamesNotifyForm">
+          <input 
+            type="email" 
+            placeholder={newsletter.placeholder}
+            required
+            class="email-input"
+          />
+          <button type="submit" class="btn btn-primary">{newsletter.buttonText}</button>
+        </form>
+        <p class="privacy-note">We respect your privacy. Unsubscribe at any time.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Preview Section -->
+  <section class="preview-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>{preview.title}</h2>
+      </div>
+      
+      <div class="preview-grid">
+        {preview.items.map((item: any) => (
+          <div class="preview-item">
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <!-- CTA Section -->
+  <section class="games-cta">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Stay Connected</h2>
+        <p>Follow our journey as we develop these exciting educational games.</p>
+        <div class="cta-buttons">
+          <a href="/contact" class="btn btn-primary">Contact Us</a>
+          <a href="/animation" class="btn btn-secondary">View Our Work</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .games-hero {
+    position: relative;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .hero-background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.4);
+  }
+  
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.9) 0%, rgba(102, 126, 234, 0.8) 100%);
+  }
+  
+  .animated-particles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: float-particles 20s infinite;
+  }
+  
+  .particle:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 15s;
+  }
+  
+  .particle:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+    animation-duration: 18s;
+  }
+  
+  .particle:nth-child(3) {
+    left: 50%;
+    animation-delay: 4s;
+    animation-duration: 20s;
+  }
+  
+  .particle:nth-child(4) {
+    left: 70%;
+    animation-delay: 6s;
+    animation-duration: 16s;
+  }
+  
+  .particle:nth-child(5) {
+    left: 90%;
+    animation-delay: 8s;
+    animation-duration: 22s;
+  }
+  
+  @keyframes float-particles {
+    0% {
+      transform: translateY(100vh) scale(0);
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) scale(1);
+      opacity: 0;
+    }
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    color: white;
+    padding: 2rem;
+  }
+  
+  .status-badge {
+    display: inline-block;
+    background: var(--accent);
+    color: white;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+      box-shadow: 0 0 0 0 rgba(233, 69, 96, 0.7);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 10px rgba(233, 69, 96, 0);
+    }
+  }
+  
+  .hero-title {
+    color: white;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    text-shadow: 3px 5px 15px rgba(0, 0, 0, 0.4);
+    animation: fadeInUp 1s ease-out;
+  }
+  
+  .hero-subtitle {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: clamp(1.3rem, 2.5vw, 1.8rem);
+    max-width: 700px;
+    margin: 0 auto;
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+  }
+  
+  .coming-soon-main {
+    padding: 6rem 0;
+    background: white;
+  }
+  
+  .main-content {
+    text-align: center;
+  }
+  
+  .countdown-wrapper h2 {
+    color: var(--primary);
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    margin-bottom: 2rem;
+  }
+  
+  .launch-year {
+    font-size: clamp(4rem, 10vw, 8rem);
+    font-weight: 900;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 2rem;
+    line-height: 1;
+  }
+  
+  .description {
+    font-size: 1.3rem;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 0 auto 4rem;
+    line-height: 1.8;
+  }
+  
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 4rem;
+  }
+  
+  .feature-card {
+    background: #f8f9fa;
+    padding: 2.5rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  }
+  
+  .feature-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .feature-card h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .feature-card p {
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+  
+  .newsletter-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 6rem 0;
+  }
+  
+  .newsletter-box {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+  }
+  
+  .newsletter-box h2 {
+    color: white;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 1rem;
+  }
+  
+  .newsletter-box > p {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 1.2rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .email-input {
+    flex: 1;
+    padding: 1.2rem 1.5rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50px;
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .email-input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  
+  .email-input:focus {
+    outline: none;
+    border-color: white;
+    background: rgba(255, 255, 255, 0.2);
+  }
+  
+  .newsletter-form .btn {
+    padding: 1.2rem 2.5rem;
+    white-space: nowrap;
+  }
+  
+  .privacy-note {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+  }
+  
+  .preview-section {
+    padding: 6rem 0;
+    background: #f8f9fa;
+  }
+  
+  .preview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+  }
+  
+  .preview-item {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .preview-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+  }
+  
+  .preview-item h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+  }
+  
+  .preview-item p {
+    color: var(--text-light);
+    line-height: 1.7;
+  }
+  
+  .games-cta {
+    background: var(--primary);
+    padding: 5rem 0;
+    text-align: center;
+  }
+  
+  .cta-content h2 {
+    color: white;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .cta-content p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .games-hero {
+      height: 80vh;
+    }
+    
+    .newsletter-form {
+      flex-direction: column;
+    }
+    
+    .newsletter-form .btn {
+      width: 100%;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .cta-buttons .btn {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+</style>
+
+<script>
+  document.getElementById('gamesNotifyForm')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const email = (e.target as HTMLFormElement).querySelector('input')?.value;
+    alert(`Thank you! We'll notify you at ${email} when our games launch!`);
+    (e.target as HTMLFormElement).reset();
+  });
+</script>

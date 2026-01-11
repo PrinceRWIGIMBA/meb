@@ -56,7 +56,8 @@ const {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin-top: 70px;
+    /* REMOVED: margin-top: 70px; */
+    /* Hero now starts at the very top, behind the transparent header */
   }
   
   .hero-background {
@@ -89,6 +90,8 @@ const {
     text-align: center;
     color: white;
     padding: 2rem;
+    /* Add padding-top to push content down from header */
+    padding-top: 8rem;
   }
   
   .hero-title {
@@ -117,10 +120,25 @@ const {
     animation: fadeInUp 0.8s ease-out 0.4s backwards;
   }
   
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
   @media (max-width: 768px) {
     .hero {
       height: 80vh;
-      margin-top: 60px;
+      /* REMOVED: margin-top: 60px; */
+    }
+    
+    .hero-content {
+      padding-top: 6rem;
     }
     
     .hero-buttons {

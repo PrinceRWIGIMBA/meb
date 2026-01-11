@@ -1,13 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
+import aboutData from '../data/about.json';
+
+const { hero, story, mission, vision, differentiators, values } = aboutData;
 ---
 
 <Layout title="About Us" description="Learn about MEB CBC Rwanda - a social enterprise dedicated to film production and youth empowerment">
   <Hero 
-    title="About MEB CBC Rwanda"
-    subtitle="Empowering communities through film and training"
-    image="/images/crew.jpg"
+    title={hero.title}
+    subtitle={hero.subtitle}
+    image={hero.image}
     height="60vh"
   />
   
@@ -16,15 +19,13 @@ import Hero from '../components/Hero.astro';
     <div class="container">
       <div class="story-grid">
         <div class="story-image">
-          <img src="/images/training.jpg" alt="MEB CBC Team">
+          <img src={story.image} alt="MEB CBC Team">
         </div>
         <div class="story-content">
-          <h2>Who We Are</h2>
-          <p>MEB CBC is a <strong>Rwanda-based film production social enterprise</strong> localized in 2021. We bridge professional filmmaking with social impact, creating a sustainable model that benefits both our clients and our community.</p>
-          
-          <p>We produce high-quality professional films for commercial clients, NGOs, and international productions, while simultaneously operating as a social enterprise that reinvests <strong>100% of our profits</strong> into non-profit training programs for youth and women in Rwanda.</p>
-          
-          <p>Our dual mission allows us to maintain professional excellence in film production while making a lasting impact on Rwanda's creative industry and the lives of aspiring filmmakers and animators.</p>
+          <h2>{story.title}</h2>
+          {story.content.split('\n\n').map((paragraph: string) => (
+            <p set:html={paragraph.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')} />
+          ))}
         </div>
       </div>
     </div>
@@ -36,14 +37,14 @@ import Hero from '../components/Hero.astro';
       <div class="grid grid-2">
         <div class="mission-card">
           <div class="icon">🎯</div>
-          <h3>Our Mission</h3>
-          <p>To produce world-class films and provide professional fixing services while creating sustainable opportunities for Rwandan youth and women through comprehensive training and job creation in the film and animation industry.</p>
+          <h3>{mission.title}</h3>
+          <p>{mission.content}</p>
         </div>
         
         <div class="mission-card">
           <div class="icon">🌟</div>
-          <h3>Our Vision</h3>
-          <p>To be East Africa's leading social enterprise in film production, recognized for both our creative excellence and our transformative impact on communities through media education and empowerment.</p>
+          <h3>{vision.title}</h3>
+          <p>{vision.content}</p>
         </div>
       </div>
     </div>
@@ -57,41 +58,13 @@ import Hero from '../components/Hero.astro';
       </div>
       
       <div class="diff-grid">
-        <div class="diff-item">
-          <div class="diff-icon">💼</div>
-          <h4>Professional Excellence</h4>
-          <p>We deliver the same high-quality production and fixing services as any commercial film company, with experienced crews and international standards.</p>
-        </div>
-        
-        <div class="diff-item">
-          <div class="diff-icon">❤️</div>
-          <h4>Social Impact</h4>
-          <p>Every project you do with us directly funds training programs for underprivileged youth and women, creating lasting change in communities.</p>
-        </div>
-        
-        <div class="diff-item">
-          <div class="diff-icon">🌍</div>
-          <h4>Local Expertise</h4>
-          <p>As a locally-rooted organization, we bring authentic cultural understanding and deep community connections to every project.</p>
-        </div>
-        
-        <div class="diff-item">
-          <div class="diff-icon">📈</div>
-          <h4>Sustainable Model</h4>
-          <p>Our social enterprise model ensures long-term sustainability for both our business operations and our training programs.</p>
-        </div>
-        
-        <div class="diff-item">
-          <div class="diff-icon">🤝</div>
-          <h4>Partnership Approach</h4>
-          <p>We collaborate closely with international partners like Media Education Babelsberg to bring world-class training to Rwanda.</p>
-        </div>
-        
-        <div class="diff-item">
-          <div class="diff-icon">🎓</div>
-          <h4>Proven Track Record</h4>
-          <p>Hundreds of creatives trained, multiple successful productions, and measurable impact on Rwanda's media landscape.</p>
-        </div>
+        {differentiators.map((item: any) => (
+          <div class="diff-item">
+            <div class="diff-icon">{item.icon}</div>
+            <h4>{item.title}</h4>
+            <p>{item.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -104,35 +77,12 @@ import Hero from '../components/Hero.astro';
       </div>
       
       <div class="values-grid">
-        <div class="value-card">
-          <h4>Excellence</h4>
-          <p>We maintain the highest professional standards in every project we undertake.</p>
-        </div>
-        
-        <div class="value-card">
-          <h4>Empowerment</h4>
-          <p>We believe in creating opportunities that enable people to build sustainable careers.</p>
-        </div>
-        
-        <div class="value-card">
-          <h4>Integrity</h4>
-          <p>We operate with transparency and honesty in all our business and training activities.</p>
-        </div>
-        
-        <div class="value-card">
-          <h4>Collaboration</h4>
-          <p>We work together with communities, partners, and clients to achieve shared goals.</p>
-        </div>
-        
-        <div class="value-card">
-          <h4>Innovation</h4>
-          <p>We continuously seek creative solutions to both production challenges and social needs.</p>
-        </div>
-        
-        <div class="value-card">
-          <h4>Sustainability</h4>
-          <p>We build models that create lasting positive change for people and the industry.</p>
-        </div>
+        {values.map((value: any) => (
+          <div class="value-card">
+            <h4>{value.title}</h4>
+            <p>{value.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>

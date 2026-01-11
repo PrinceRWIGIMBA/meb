@@ -2,13 +2,26 @@
 import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import GalleryItem from '../components/GalleryItem.astro';
+import animationData from '../data/animation.json';
+
+const { hero, intro, services, workshop, testimonials } = animationData;
+
+// Portfolio items - these will come from CMS later
+const portfolioItems = [
+  { image: "/images/isano.jpg", title: "Isano", description: "A culturally-rich animated film created through our training program.", videoLink: "#" },
+  { image: "/images/animation-still-1.png", title: "Nyiragitwa", description: "Community-focused animation developed with youth participants.", videoLink: "#" },
+  { image: "/images/animation-still-2.png", title: "Bwiza Animation", description: "Cultural storytelling project produced by our training graduates.", videoLink: "#" },
+  { image: "/images/training.jpg", title: "Educational Series", description: "Animated educational content for health awareness.", videoLink: "#" },
+  { image: "/images/crew.jpg", title: "Behind the Scenes", description: "Documentary showing our animation production process.", videoLink: "#" },
+  { image: "/images/lake-women-1.jpg", title: "Women's Stories", description: "Animated narratives highlighting Rwandan women.", videoLink: "#" }
+];
 ---
 
 <Layout title="Animation & Workshops" description="Animation production and workshops for youth and women in Rwanda">
   <Hero 
-    title="Animation & Workshops"
-    subtitle="Creating stories through animation and empowering creative talent"
-    image="/images/animation-still-1.png"
+    title={hero.title}
+    subtitle={hero.subtitle}
+    image={hero.image}
     height="60vh"
   />
   
@@ -17,29 +30,22 @@ import GalleryItem from '../components/GalleryItem.astro';
     <div class="container">
       <div class="intro-grid">
         <div class="intro-content">
-          <h2>Animation Production & Training</h2>
-          <p>We offer professional animation production services while simultaneously running comprehensive animation workshops focused on youth and women. Income from our commercial animation projects directly supports free and subsidized training programs.</p>
-          
-          <p>Our animation work combines storytelling with social impact, creating content that entertains, educates, and empowers both the audience and the creators behind it.</p>
+          <h2>{intro.title}</h2>
+          <p>{intro.description}</p>
+          <p>{intro.description2}</p>
           
           <div class="stats-row">
-            <div class="stat">
-              <h3>50+</h3>
-              <p>Animation Trainees</p>
-            </div>
-            <div class="stat">
-              <h3>20+</h3>
-              <p>Completed Projects</p>
-            </div>
-            <div class="stat">
-              <h3>15+</h3>
-              <p>Workshop Sessions</p>
-            </div>
+            {intro.stats.map((stat: any) => (
+              <div class="stat">
+                <h3>{stat.number}</h3>
+                <p>{stat.label}</p>
+              </div>
+            ))}
           </div>
         </div>
         
         <div class="intro-image">
-          <img src="/images/animation-still-2.png" alt="Animation Work">
+          <img src={intro.image} alt="Animation Work">
         </div>
       </div>
     </div>
@@ -53,29 +59,13 @@ import GalleryItem from '../components/GalleryItem.astro';
       </div>
       
       <div class="services-grid">
-        <div class="service-box">
-          <div class="service-icon">🎨</div>
-          <h3>2D Animation</h3>
-          <p>Character animation, explainer videos, and educational content using industry-standard software and techniques.</p>
-        </div>
-        
-        <div class="service-box">
-          <div class="service-icon">🎬</div>
-          <h3>Animated Shorts</h3>
-          <p>Story-driven animated films that capture local narratives, culture, and important social messages.</p>
-        </div>
-        
-        <div class="service-box">
-          <div class="service-icon">📚</div>
-          <h3>Educational Animation</h3>
-          <p>Engaging animated content for NGOs, educational institutions, and public awareness campaigns.</p>
-        </div>
-        
-        <div class="service-box">
-          <div class="service-icon">🎓</div>
-          <h3>Animation Workshops</h3>
-          <p>Hands-on training programs teaching animation fundamentals, storytelling, and production workflows.</p>
-        </div>
+        {services.map((service: any) => (
+          <div class="service-box">
+            <div class="service-icon">{service.icon}</div>
+            <h3>{service.title}</h3>
+            <p>{service.description}</p>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -89,47 +79,14 @@ import GalleryItem from '../components/GalleryItem.astro';
       </div>
       
       <div class="grid grid-3">
-        <GalleryItem 
-          image="/images/isano.jpg"
-          title="Isano"
-          description="A culturally-rich animated film created through our training program, showcasing traditional Rwandan stories and values."
-          videoLink="#"
-        />
-        
-        <GalleryItem 
-          image="/images/animation-still-1.png"
-          title="Nyiragitwa"
-          description="Community-focused animation developed with youth participants, addressing local social themes."
-          videoLink="#"
-        />
-        
-        <GalleryItem 
-          image="/images/animation-still-2.png"
-          title="Bwiza Animation"
-          description="Cultural storytelling project produced by our training graduates, highlighting Rwandan heritage."
-          videoLink="#"
-        />
-        
-        <GalleryItem 
-          image="/images/training.jpg"
-          title="Educational Series"
-          description="Animated educational content for health awareness and community development programs."
-          videoLink="#"
-        />
-        
-        <GalleryItem 
-          image="/images/crew.jpg"
-          title="Behind the Scenes"
-          description="Documentary showing our animation production process and training methods."
-          videoLink="#"
-        />
-        
-        <GalleryItem 
-          image="/images/lake-women-1.jpg"
-          title="Women's Stories"
-          description="Animated narratives highlighting the experiences and achievements of Rwandan women."
-          videoLink="#"
-        />
+        {portfolioItems.map((item) => (
+          <GalleryItem 
+            image={item.image}
+            title={item.title}
+            description={item.description}
+            videoLink={item.videoLink}
+          />
+        ))}
       </div>
     </div>
   </section>
@@ -138,55 +95,35 @@ import GalleryItem from '../components/GalleryItem.astro';
   <section class="workshops">
     <div class="container">
       <div class="section-title">
-        <h2>Animation Workshop Programs</h2>
-        <p>Building skills and creating opportunities</p>
+        <h2>{workshop.title}</h2>
+        <p>{workshop.subtitle}</p>
       </div>
       
       <div class="workshop-content">
         <div class="workshop-description">
           <h3>Who Can Join?</h3>
-          <p>Our animation workshops are designed for:</p>
+          <p>{workshop.description}</p>
           <ul class="participant-list">
-            <li>Youth aged 18-30 interested in animation careers</li>
-            <li>Women seeking creative industry skills</li>
-            <li>Film and media students</li>
-            <li>Creative professionals expanding their skills</li>
-            <li>Community storytellers and artists</li>
+            {workshop.participants.map((participant: string) => (
+              <li>{participant}</li>
+            ))}
           </ul>
           
           <div class="workshop-features">
             <h3>What You'll Learn</h3>
             <div class="feature-grid">
-              <div class="feature-item">
-                <span class="feature-icon">✏️</span>
-                <span>Character Design & Development</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">📖</span>
-                <span>Storyboarding & Visual Storytelling</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">🎬</span>
-                <span>Animation Production Workflow</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">💻</span>
-                <span>Industry Software (Toon Boom, Adobe)</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">🎨</span>
-                <span>Color Theory & Visual Design</span>
-              </div>
-              <div class="feature-item">
-                <span class="feature-icon">🔊</span>
-                <span>Sound & Voice Integration</span>
-              </div>
+              {workshop.features.map((feature: string) => (
+                <div class="feature-item">
+                  <span class="feature-icon">✏️</span>
+                  <span>{feature}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
         
         <div class="workshop-image">
-          <img src="/images/training.jpg" alt="Animation Workshop">
+          <img src={workshop.image} alt="Animation Workshop">
           <div class="workshop-cta-box">
             <h4>Interested in Our Workshops?</h4>
             <p>Programs are offered free or at subsidized rates thanks to our social enterprise model.</p>
@@ -205,20 +142,12 @@ import GalleryItem from '../components/GalleryItem.astro';
       </div>
       
       <div class="stories-grid">
-        <div class="story-card">
-          <div class="story-quote">"The animation training opened doors I never knew existed. Now I'm working on projects for international clients."</div>
-          <div class="story-author">— Marie, Animation Graduate 2023</div>
-        </div>
-        
-        <div class="story-card">
-          <div class="story-quote">"Learning animation here changed my life. I can now tell our stories in ways that reach wider audiences."</div>
-          <div class="story-author">— Jean-Paul, Animator & Storyteller</div>
-        </div>
-        
-        <div class="story-card">
-          <div class="story-quote">"As a woman in tech and creative arts, this program gave me both skills and confidence to pursue my passion professionally."</div>
-          <div class="story-author">— Grace, Animation Studio Founder</div>
-        </div>
+        {testimonials.map((testimonial: any) => (
+          <div class="story-card">
+            <div class="story-quote">"{testimonial.quote}"</div>
+            <div class="story-author">— {testimonial.author}</div>
+          </div>
+        ))}
       </div>
     </div>
   </section>
@@ -369,7 +298,7 @@ import GalleryItem from '../components/GalleryItem.astro';
   
   .feature-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
     gap: 1rem;
     margin-top: 1rem;
   }
@@ -490,10 +419,6 @@ import GalleryItem from '../components/GalleryItem.astro';
     .stats-row {
       flex-direction: column;
       gap: 1rem;
-    }
-    
-    .feature-grid {
-      grid-template-columns: 1fr;
     }
     
     .cta-buttons {

@@ -1,0 +1,62 @@
+{
+  "hero": {
+    "title": "Interactive Games",
+    "subtitle": "Educational gaming experiences coming soon",
+    "image": "/images/logo1.jpeg",
+    "status": "Coming Soon"
+  },
+  "comingSoon": {
+    "mainTitle": "Something Exciting is Coming",
+    "description": "We're developing interactive educational games that combine storytelling with learning. Our games will empower youth through engaging digital experiences.",
+    "launchDate": "2025",
+    "features": [
+      {
+        "icon": "🎮",
+        "title": "Educational Gaming",
+        "description": "Learn while playing with our interactive story-driven games"
+      },
+      {
+        "icon": "🎨",
+        "title": "Rwanda Stories",
+        "description": "Games featuring local narratives and cultural heritage"
+      },
+      {
+        "icon": "📱",
+        "title": "Mobile & Web",
+        "description": "Play on any device - mobile, tablet, or desktop"
+      },
+      {
+        "icon": "👥",
+        "title": "Youth Focused",
+        "description": "Designed by and for young Rwandans"
+      }
+    ]
+  },
+  "newsletter": {
+    "title": "Get Notified When We Launch",
+    "description": "Be the first to know when our games go live. Join our mailing list for exclusive early access.",
+    "placeholder": "Enter your email address",
+    "buttonText": "Notify Me"
+  },
+  "preview": {
+    "title": "What to Expect",
+    "items": [
+      {
+        "title": "Story-Driven Adventures",
+        "description": "Immersive narratives that teach important life skills and values"
+      },
+      {
+        "title": "Cultural Education",
+        "description": "Learn about Rwandan history, culture, and traditions through play"
+      },
+      {
+        "title": "Skill Building",
+        "description": "Develop critical thinking, problem-solving, and creativity"
+      },
+      {
+        "title": "Social Impact",
+        "description": "Games created by our training program graduates"
+      }
+    ]
+  }
+}

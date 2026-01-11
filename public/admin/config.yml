@@ -10,7 +10,7 @@ collections:
   - name: "settings"
     label: "Site Settings"
     files:
-      - file: "src/data/site.json"
+      - file: "src/pages/site.json"
         label: "Site Information"
         name: "site"
         fields:
@@ -33,7 +33,7 @@ collections:
   - name: "home"
     label: "Home Page"
     files:
-      - file: "src/data/home.json"
+      - file: "src/pages/home.json"
         label: "Home Page Content"
         name: "home"
         fields:
@@ -79,7 +79,7 @@ collections:
   - name: "about"
     label: "About Page"
     files:
-      - file: "src/data/about.json"
+      - file: "src/pages/about.json"
         label: "About Page Content"
         name: "about"
         fields:
@@ -124,7 +124,7 @@ collections:
   - name: "services"
     label: "Services"
     files:
-      - file: "src/data/services.json"
+      - file: "src/pages/services.json"
         label: "Services Content"
         name: "services"
         fields:
@@ -164,7 +164,7 @@ collections:
   # Portfolio/Gallery
   - name: "portfolio"
     label: "Portfolio"
-    folder: "src/data/portfolio"
+    folder: "src/pages/portfolio"
     create: true
     slug: "{{slug}}"
     fields:
@@ -181,7 +181,7 @@ collections:
   - name: "animation"
     label: "Animation Page"
     files:
-      - file: "src/data/animation.json"
+      - file: "src/pages/animation.json"
         label: "Animation Content"
         name: "animation"
         fields:
@@ -214,7 +214,7 @@ collections:
   - name: "training"
     label: "Training Page"
     files:
-      - file: "src/data/training.json"
+      - file: "src/pages/training.json"
         label: "Training Content"
         name: "training"
         fields:
@@ -249,7 +249,7 @@ collections:
   - name: "impact"
     label: "Impact Page"
     files:
-      - file: "src/data/impact.json"
+      - file: "src/pages/impact.json"
         label: "Impact Content"
         name: "impact"
         fields:
@@ -291,7 +291,7 @@ collections:
   # Testimonials
   - name: "testimonials"
     label: "Testimonials"
-    folder: "src/data/testimonials"
+    folder: "src/pages/testimonials"
     create: true
     slug: "{{slug}}"
     fields:
@@ -306,7 +306,7 @@ collections:
   # Blog Posts
   - name: "blog"
     label: "Blog"
-    folder: "src/data/blog"
+    folder: "src/pages/"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
@@ -322,7 +322,7 @@ collections:
   # Team Members
   - name: "team"
     label: "Team Members"
-    folder: "src/data/team"
+    folder: "src/pages/team"
     create: true
     slug: "{{slug}}"
     fields:
@@ -343,7 +343,7 @@ collections:
   # FAQ
   - name: "faq"
     label: "FAQ"
-    folder: "src/data/faq"
+    folder: "src/pages/faq"
     create: true
     slug: "{{slug}}"
     fields:
@@ -355,7 +355,7 @@ collections:
   # Partners
   - name: "partners"
     label: "Partners"
-    folder: "src/data/partners"
+    folder: "src/pages/partners"
     create: true
     slug: "{{slug}}"
     fields:

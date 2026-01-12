@@ -75,6 +75,33 @@ collections:
               - {label: "CTA Text", name: "ctaText", widget: "string"}
               - {label: "CTA Link", name: "ctaLink", widget: "string"}
 
+  # Portfolio Collection
+  - name: "portfolio_data"
+    label: "Portfolio"
+    files:
+      - file: "src/data/portfolio.json"
+        label: "Portfolio Items"
+        name: "portfolio"
+        fields:
+          - label: "Portfolio Items"
+            name: "items"
+            widget: "list"
+            summary: "{{fields.title}} - {{fields.category}}"
+            fields:
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Video Link", name: "videoLink", widget: "string", required: false, default: "#"}
+              - label: "Category"
+                name: "category"
+                widget: "select"
+                options:
+                  - { label: "Animation", value: "animation" }
+                  - { label: "Documentary", value: "documentary" }
+                  - { label: "Production", value: "production" }
+                  - { label: "Training", value: "training" }
+                default: "animation"
+
   # About Page
   - name: "about"
     label: "About Page"
@@ -162,38 +189,6 @@ collections:
               - {label: "Items", name: "items", widget: "list", field: {label: "Item", name: "item", widget: "string"}}
 
 
-  # Add this Portfolio collection
-  - name: "portfolio"
-    label: "Portfolio"
-    label_singular: "Portfolio Item"
-    folder: "src/data"
-    identifier_field: "title"
-    extension: "json"
-    format: "json"
-    create: true
-    delete: true
-    slug: "portfolio"
-    editor:
-      preview: false
-    fields:
-      - label: "Items"
-        name: "items"
-        widget: "list"
-        summary: "{{fields.title}}"
-        fields:
-          - { label: "Image", name: "image", widget: "image" }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-          - { label: "Video Link", name: "videoLink", widget: "string", required: false }
-          - label: "Category"
-            name: "category"
-            widget: "select"
-            options:
-              - { label: "Animation", value: "animation" }
-              - { label: "Documentary", value: "documentary" }
-              - { label: "Production", value: "production" }
-              - { label: "Training", value: "training" }
-            default: "animation"
   # Animation Page
   - name: "animation"
     label: "Animation Page"
@@ -210,6 +205,21 @@ collections:
               - {label: "Subtitle", name: "subtitle", widget: "text"}
               - {label: "Image", name: "image", widget: "image"}
           
+          - label: "Intro Section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Description 2", name: "description2", widget: "text", required: false}
+              - {label: "Image", name: "image", widget: "image"}
+              - label: "Stats"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - {label: "Number", name: "number", widget: "string"}
+                  - {label: "Label", name: "label", widget: "string"}
+          
           - label: "Animation Services"
             name: "services"
             widget: "list"
@@ -223,9 +233,18 @@ collections:
             widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "string"}
               - {label: "Description", name: "description", widget: "text"}
               - {label: "Image", name: "image", widget: "image"}
+              - {label: "Participants", name: "participants", widget: "list", field: {label: "Participant", name: "participant", widget: "string"}}
               - {label: "Features", name: "features", widget: "list", field: {label: "Feature", name: "feature", widget: "string"}}
+          
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - {label: "Quote", name: "quote", widget: "text"}
+              - {label: "Author", name: "author", widget: "string"}
 
   # Training Page
   - name: "training"

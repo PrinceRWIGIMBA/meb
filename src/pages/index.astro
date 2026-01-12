@@ -4,48 +4,10 @@ import Hero from '../components/Hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import GalleryItem from '../components/GalleryItem.astro';
 import homeData from '../data/home.json';
+import portfolioData from '../data/portfolio.json';
 
 const { hero, whatWeDo, socialModel } = homeData;
-
-// Portfolio items (you can add these later through CMS)
-const portfolioItems = [
-  {
-    image: "/images/lake-women-1.jpg",
-    title: "Lake Women Documentary",
-    description: "A powerful documentary highlighting the lives and stories of women working around Rwanda's lakes.",
-    videoLink: "#"
-  },
-  {
-    image: "/images/isano.jpg",
-    title: "Isano Animation",
-    description: "An animated film created through our training program, showcasing local stories and culture.",
-    videoLink: "#"
-  },
-  {
-    image: "/images/animation-still-1.png",
-    title: "Nyiragitwa Animation",
-    description: "Community-focused animation project developed with youth participants.",
-    videoLink: "#"
-  },
-  {
-    image: "/images/animation-still-2.png",
-    title: "Bwiza Animation",
-    description: "Cultural storytelling through animation, produced by our training graduates.",
-    videoLink: "#"
-  },
-  {
-    image: "/images/lake-women-2.jpg",
-    title: "Community Stories",
-    description: "Documentary series capturing authentic voices from communities across Rwanda.",
-    videoLink: "#"
-  },
-  {
-    image: "/images/crew.jpg",
-    title: "Behind the Scenes",
-    description: "Professional production work with international and local crews.",
-    videoLink: "#"
-  }
-];
+const portfolioItems = portfolioData.items.slice(0, 6); // Get first 6 items for homepage
 ---
 
 <Layout title="Home">

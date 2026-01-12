@@ -1,0 +1,60 @@
+{
+  "items": [
+    {
+      "image": "/images/lake-women-1.jpg",
+      "title": "Lake Women Documentary",
+      "description": "A powerful documentary highlighting the lives and stories of women working around Rwanda's lakes.",
+      "videoLink": "#",
+      "category": "documentary"
+    },
+    {
+      "image": "/images/isano.jpg",
+      "title": "Isano Animation",
+      "description": "An animated film created through our training program, showcasing local stories and culture.",
+      "videoLink": "#",
+      "category": "animation"
+    },
+    {
+      "image": "/images/animation-still-1.png",
+      "title": "Nyiragitwa Animation",
+      "description": "Community-focused animation project developed with youth participants.",
+      "videoLink": "#",
+      "category": "animation"
+    },
+    {
+      "image": "/images/animation-still-2.png",
+      "title": "Bwiza Animation",
+      "description": "Cultural storytelling through animation, produced by our training graduates.",
+      "videoLink": "#",
+      "category": "animation"
+    },
+    {
+      "image": "/images/lake-women-2.jpg",
+      "title": "Community Stories",
+      "description": "Documentary series capturing authentic voices from communities across Rwanda.",
+      "videoLink": "#",
+      "category": "documentary"
+    },
+    {
+      "image": "/images/crew.jpg",
+      "title": "Behind the Scenes",
+      "description": "Professional production work with international and local crews.",
+      "videoLink": "#",
+      "category": "production"
+    },
+    {
+      "image": "/images/training.jpg",
+      "title": "Educational Series",
+      "description": "Animated educational content for health awareness.",
+      "videoLink": "#",
+      "category": "animation"
+    },
+    {
+      "image": "/images/lake-women-1.jpg",
+      "title": "Women's Stories",
+      "description": "Animated narratives highlighting Rwandan women.",
+      "videoLink": "#",
+      "category": "animation"
+    }
+  ]
+}

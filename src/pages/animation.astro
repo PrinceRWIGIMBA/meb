@@ -3,18 +3,15 @@ import Layout from '../layouts/Layout.astro';
 import Hero from '../components/Hero.astro';
 import GalleryItem from '../components/GalleryItem.astro';
 import animationData from '../data/animation.json';
+import portfolioData from '../data/portfolio.json';
 
 const { hero, intro, services, workshop, testimonials } = animationData;
 
-// Portfolio items - these will come from CMS later
-const portfolioItems = [
-  { image: "/images/isano.jpg", title: "Isano", description: "A culturally-rich animated film created through our training program.", videoLink: "#" },
-  { image: "/images/animation-still-1.png", title: "Nyiragitwa", description: "Community-focused animation developed with youth participants.", videoLink: "#" },
-  { image: "/images/animation-still-2.png", title: "Bwiza Animation", description: "Cultural storytelling project produced by our training graduates.", videoLink: "#" },
-  { image: "/images/training.jpg", title: "Educational Series", description: "Animated educational content for health awareness.", videoLink: "#" },
-  { image: "/images/crew.jpg", title: "Behind the Scenes", description: "Documentary showing our animation production process.", videoLink: "#" },
-  { image: "/images/lake-women-1.jpg", title: "Women's Stories", description: "Animated narratives highlighting Rwandan women.", videoLink: "#" }
-];
+// Filter animation-specific items or use all
+const portfolioItems = portfolioData.items.filter(item => 
+  item.category === 'animation' || item.category === 'documentary'
+);
+---
 ---
 
 <Layout title="Animation & Workshops" description="Animation production and workshops for youth and women in Rwanda">

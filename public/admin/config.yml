@@ -161,22 +161,39 @@ collections:
               - {label: "Icon", name: "icon", widget: "string"}
               - {label: "Items", name: "items", widget: "list", field: {label: "Item", name: "item", widget: "string"}}
 
-  # Portfolio/Gallery
+
+  # Add this Portfolio collection
   - name: "portfolio"
     label: "Portfolio"
-    folder: "src/data/portfolio"
+    label_singular: "Portfolio Item"
+    folder: "src/data"
+    identifier_field: "title"
+    extension: "json"
+    format: "json"
     create: true
-    slug: "{{slug}}"
+    delete: true
+    slug: "portfolio"
+    editor:
+      preview: false
     fields:
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Image", name: "image", widget: "image"}
-      - {label: "Video Link", name: "videoLink", widget: "string", required: false}
-      - {label: "Category", name: "category", widget: "select", options: ["Film", "Animation", "Documentary", "NGO Video"]}
-      - {label: "Featured", name: "featured", widget: "boolean", default: false}
-      - {label: "Order", name: "order", widget: "number", default: 0}
-      - {label: "Date", name: "date", widget: "datetime"}
-
+      - label: "Items"
+        name: "items"
+        widget: "list"
+        summary: "{{fields.title}}"
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Description", name: "description", widget: "text" }
+          - { label: "Video Link", name: "videoLink", widget: "string", required: false }
+          - label: "Category"
+            name: "category"
+            widget: "select"
+            options:
+              - { label: "Animation", value: "animation" }
+              - { label: "Documentary", value: "documentary" }
+              - { label: "Production", value: "production" }
+              - { label: "Training", value: "training" }
+            default: "animation"
   # Animation Page
   - name: "animation"
     label: "Animation Page"

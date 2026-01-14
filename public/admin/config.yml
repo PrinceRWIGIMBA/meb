@@ -352,7 +352,58 @@ collections:
               - {label: "Author", name: "author", widget: "string"}
               - {label: "Role", name: "role", widget: "string"}
               - {label: "Image", name: "image", widget: "image"}
-
+# Games Page
+  - name: "games"
+    label: "Games Page"
+    files:
+      - file: "src/data/games.json"
+        label: "Games Content"
+        name: "games"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "text"}
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Status", name: "status", widget: "string"}
+          
+          - label: "Coming Soon Section"
+            name: "comingSoon"
+            widget: "object"
+            fields:
+              - {label: "Main Title", name: "mainTitle", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Launch Date", name: "launchDate", widget: "string"}
+              - label: "Features"
+                name: "features"
+                widget: "list"
+                fields:
+                  - {label: "Icon", name: "icon", widget: "string"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
+          
+          - label: "Newsletter Section"
+            name: "newsletter"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Placeholder", name: "placeholder", widget: "string"}
+              - {label: "Button Text", name: "buttonText", widget: "string"}
+          
+          - label: "Preview Section"
+            name: "preview"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
               # Contact Page
   - name: "contact"
     label: "Contact Page"

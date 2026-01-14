@@ -1,6 +1,6 @@
 {
   "hero": {
-    "title": "Film Production & Fixing Services in Rwanda",
+    "title": "Film Production Services in Rwanda",
     "subtitle": "A social enterprise producing films and reinvesting profits into training youth and women.",
     "image": "/images/crew2.jpg",
     "cta1Text": "Production & Fixing Services",
@@ -21,17 +21,6 @@
           "NGO & Institutional Videos",
           "Photography & Videography",
           "Editing & Post-Production"
-        ]
-      },
-      {
-        "title": "Film Fixing",
-        "icon": "🌍",
-        "description": "Complete production support for international crews filming in Rwanda.",
-        "servicesList": [
-          "Location Scouting",
-          "Film Permits & Coordination",
-          "Local Crew Sourcing",
-          "Equipment & Logistics"
         ]
       },
       {

@@ -9,7 +9,7 @@
     },
     {
       "image": "/images/isano.jpg",
-      "title": "Isano Animation",
+      "title": "Isano Feature Film",
       "description": "An animated film created through our training program, showcasing local stories and culture.",
       "videoLink": "#",
       "category": "animation"
@@ -52,7 +52,7 @@
     {
       "image": "/images/lake-women-2.jpg",
       "title": "Women's Stories",
-      "description": "Animated narratives highlighting Rwandan women.",
+      "description": "Narratives highlighting Rwandan women.",
       "videoLink": "#",
       "category": "animation"
     }

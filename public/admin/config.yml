@@ -303,7 +303,7 @@ collections:
             fields:
               - {label: "Quote", name: "quote", widget: "text"}
               - {label: "Author", name: "author", widget: "string"}
-  # Impact Page
+# Impact Page
   - name: "impact"
     label: "Impact Page"
     files:
@@ -318,6 +318,13 @@ collections:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Subtitle", name: "subtitle", widget: "text"}
               - {label: "Image", name: "image", widget: "image"}
+          
+          - label: "Intro Section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description", name: "description", widget: "text"}
           
           - label: "Impact Numbers"
             name: "numbers"
@@ -346,6 +353,45 @@ collections:
               - {label: "Role", name: "role", widget: "string"}
               - {label: "Image", name: "image", widget: "image"}
 
+              # Contact Page
+  - name: "contact"
+    label: "Contact Page"
+    files:
+      - file: "src/data/contact.json"
+        label: "Contact Content"
+        name: "contact"
+        fields:
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Subtitle", name: "subtitle", widget: "text"}
+              - {label: "Image", name: "image", widget: "image"}
+          
+          - label: "Contact Information"
+            name: "info"
+            widget: "object"
+            fields:
+              - {label: "Description", name: "description", widget: "text"}
+              - {label: "Location", name: "location", widget: "string"}
+              - {label: "Phone", name: "phone", widget: "string"}
+              - {label: "Email", name: "email", widget: "string"}
+              - {label: "Website", name: "website", widget: "string"}
+              - label: "Business Hours"
+                name: "businessHours"
+                widget: "object"
+                fields:
+                  - {label: "Weekday", name: "weekday", widget: "string"}
+                  - {label: "Saturday", name: "saturday", widget: "string"}
+                  - {label: "Sunday", name: "sunday", widget: "string"}
+          
+          - label: "FAQ"
+            name: "faq"
+            widget: "list"
+            fields:
+              - {label: "Question", name: "question", widget: "string"}
+              - {label: "Answer", name: "answer", widget: "text"}
   # Testimonials
   - name: "testimonials"
     label: "Testimonials"

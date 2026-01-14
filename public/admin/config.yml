@@ -246,7 +246,7 @@ collections:
               - {label: "Quote", name: "quote", widget: "text"}
               - {label: "Author", name: "author", widget: "string"}
 
-  # Training Page
+# Training Page
   - name: "training"
     label: "Training Page"
     files:
@@ -260,6 +260,15 @@ collections:
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Subtitle", name: "subtitle", widget: "text"}
+              - {label: "Image", name: "image", widget: "image"}
+          
+          - label: "Intro Section"
+            name: "intro"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Description 1", name: "description1", widget: "text"}
+              - {label: "Description 2", name: "description2", widget: "text"}
               - {label: "Image", name: "image", widget: "image"}
           
           - label: "Programs"
@@ -280,7 +289,20 @@ collections:
               - {label: "Category", name: "category", widget: "string"}
               - {label: "Icon", name: "icon", widget: "string"}
               - {label: "Items", name: "items", widget: "list", field: {label: "Item", name: "item", widget: "string"}}
-
+          
+          - label: "Stats"
+            name: "stats"
+            widget: "list"
+            fields:
+              - {label: "Number", name: "number", widget: "string"}
+              - {label: "Label", name: "label", widget: "string"}
+          
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            fields:
+              - {label: "Quote", name: "quote", widget: "text"}
+              - {label: "Author", name: "author", widget: "string"}
   # Impact Page
   - name: "impact"
     label: "Impact Page"

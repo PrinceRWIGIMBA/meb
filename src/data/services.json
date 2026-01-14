@@ -1,3 +1,4 @@
+
 {
   "hero": {
     "title": "Production Services",
@@ -50,7 +51,7 @@
       ]
     }
   ],
-  "service": [
+  "fixing": [
     {
       "title": "Location Scouting",
       "icon": "🗺️",
@@ -124,4 +125,5 @@
       ]
     }
   ]
+
 }

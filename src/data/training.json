@@ -98,10 +98,22 @@
     }
   ],
   "stats": [
-    { "number": "200+", "label": "Creatives Trained" },
-    { "number": "65%", "label": "Women Participants" },
-    { "number": "80%", "label": "Job Placement Rate" },
-    { "number": "50+", "label": "Student Films Produced" }
+    {
+      "number": "200+",
+      "label": "Creatives Trained"
+    },
+    {
+      "number": "65%",
+      "label": "Women Participants"
+    },
+    {
+      "number": "30%",
+      "label": "Job Placement Rate"
+    },
+    {
+      "number": "50+",
+      "label": "Student Films Produced"
+    }
   ],
   "testimonials": [
     {

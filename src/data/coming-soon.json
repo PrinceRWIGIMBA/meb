@@ -1,0 +1,42 @@
+{
+  "logo": "/images/logo.png",
+  "backgroundImage": "/images/crew2.jpg",
+  "mainTitle": "Something Amazing is Coming",
+  "companyName": "MEB CBC Rwanda",
+  "tagline": "Film Production  Services | Training Youth & Women",
+  "description": "We're putting the finishing touches on our new website. Get ready for an amazing digital experience showcasing our film production services, social impact, and training programs.",
+  "launchDate": "2025-03-01",
+  "features": [
+    {
+      "icon": "🎬",
+      "title": "Film Production",
+      "description": "Professional documentary and commercial content"
+    },
+    {
+      "icon": "🎨",
+      "title": "Animation",
+      "description": "Creative storytelling through animation"
+    },
+    {
+      "icon": "🎓",
+      "title": "Training Programs",
+      "description": "Empowering youth and women in film"
+    }
+  ],
+  "socialLinks": {
+    "facebook": "#",
+    "twitter": "#",
+    "instagram": "#",
+    "linkedin": "#"
+  },
+  "contact": {
+    "email": "mebrmp2022@gmail.com",
+    "phone": "+250 795 512 502",
+    "address": "Kigali, Rwanda"
+  },
+  "newsletter": {
+    "title": "Get Notified When We Launch",
+    "placeholder": "Enter your email address",
+    "buttonText": "Notify Me"
+  }
+}

@@ -4,10 +4,10 @@ import Hero from '../components/Hero.astro';
 import ServiceCard from '../components/ServiceCard.astro';
 import servicesData from '../data/services.json';
 
-const { hero, production,service, equipment } = servicesData;
+const { hero, production, service, equipment } = servicesData;
 ---
 
-<Layout title="Production Services" description="Professional film production  services in Rwanda">
+<Layout title="Production Services" description="Professional film production services in Rwanda">
   <Hero 
     title={hero.title}
     subtitle={hero.subtitle}
@@ -20,7 +20,7 @@ const { hero, production,service, equipment } = servicesData;
     <div class="container">
       <div class="intro-content">
         <h2>Comprehensive Film Solutions</h2>
-        <p>MEB CBC provides end-to-end film production  services for clients ranging from international broadcasters to local NGOs. Our experienced team ensures your project runs smoothly from concept to delivery.</p>
+        <p>MEB CBC provides end-to-end film production services for clients ranging from international broadcasters to local NGOs. Our experienced team ensures your project runs smoothly from concept to delivery.</p>
       </div>
     </div>
   </section>
@@ -46,16 +46,16 @@ const { hero, production,service, equipment } = servicesData;
     </div>
   </section>
   
-  <!-- Film production -->
-  <section id="film" class="film-services">
+  <!-- Fixing Services -->
+  <section id="service" class="fixing-services">
     <div class="container">
       <div class="section-title">
-        <h2>Film production Services</h2>
+        <h2>Film Services</h2>
         <p>Complete production support for filming in Rwanda</p>
       </div>
       
       <div class="film-intro">
-        <p>Planning to film in Rwanda? Our film production services make international productions seamless. We handle all logistics, permits, and local coordination so you can focus on creating great content.</p>
+        <p>Planning to film in Rwanda? Our production services make international productions seamless. We handle all logistics, permits, and local coordination so you can focus on creating great content.</p>
       </div>
       
       <div class="grid grid-3">
@@ -166,7 +166,7 @@ const { hero, production,service, equipment } = servicesData;
     background: white;
   }
   
-  .film-services {
+  .fixing-services {
     background: #f8f9fa;
   }
   

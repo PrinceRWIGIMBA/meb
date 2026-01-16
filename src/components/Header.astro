@@ -17,7 +17,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
       </button>
       
       <ul class="nav-menu">
-        <li><a href="/" class={currentPath === '/' ? 'active' : ''}>Home</a></li>
+        <li><a href="/index1" class={currentPath === '/index1' ? 'active' : ''}>Home</a></li>
         <li><a href="/about" class={currentPath === '/about' ? 'active' : ''}>About</a></li>
         <li><a href="/services" class={currentPath === '/services' ? 'active' : ''}>Services</a></li>
         <li><a href="/animation" class={currentPath === '/animation' ? 'active' : ''}>Animation</a></li>

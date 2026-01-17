@@ -1,9 +1,8 @@
-
 {
   "hero": {
     "title": "Production Services",
     "subtitle": "Professional film services for local and international clients",
-    "image": "/images/crew.jpg"
+    "image": "/images/services.jpg"
   },
   "production": [
     {
@@ -125,5 +124,4 @@
       ]
     }
   ]
-
 }

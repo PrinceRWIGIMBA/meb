@@ -172,8 +172,8 @@ collections:
               - {label: "Description", name: "description", widget: "text"}
               - {label: "Services", name: "services", widget: "list", field: {label: "Service", name: "service", widget: "string"}}
           
-          - label: "Service"
-            name: "Service"
+          - label: "Film service"
+            name: "service"
             widget: "list"
             fields:
               - {label: "Title", name: "title", widget: "string"}

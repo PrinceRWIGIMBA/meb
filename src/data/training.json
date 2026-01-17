@@ -1,8 +1,11 @@
 {
   "hero": {
-    "title": "Rwanda Media Project (RMP)",
-    "subtitle": "Professional film training in partnership with Media Education Babelsberg",
-    "image": "/images/training_img.jpg"
+    "rmpLetters": "RMP",
+    "rmpFullName1": "RWANDA",
+    "rmpFullName2": "MEDIA PROJECT",
+    "tagline": "THE TRAINING FOR RWANDAN FILMMAKERS",
+    "link": "http://www.rwandamediaproject.com/",
+    "image": "/images/image_1_1768605978070.jpg"
   },
   "intro": {
     "title": "Building Rwanda's Film Industry",

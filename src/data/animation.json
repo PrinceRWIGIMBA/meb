@@ -8,11 +8,20 @@
     "title": "Animation Production & Training",
     "description": "We offer professional animation production services while simultaneously running comprehensive animation workshops focused on youth and women. Income from our commercial animation projects directly supports free and subsidized training programs.",
     "description2": "Our animation work combines storytelling with social impact, creating content that entertains, educates, and empowers both the audience and the creators behind it.",
-    "image": "/images/animation-still-2.png",
+    "image": "/images/animation_tarining.jpg",
     "stats": [
-      { "number": "50+", "label": "Animation Trainees" },
-      { "number": "20+", "label": "Completed Projects" },
-      { "number": "15+", "label": "Workshop Sessions" }
+      {
+        "number": "50+",
+        "label": "Animation Trainees"
+      },
+      {
+        "number": "20+",
+        "label": "Completed Projects"
+      },
+      {
+        "number": "15+",
+        "label": "Workshop Sessions"
+      }
     ]
   },
   "services": [

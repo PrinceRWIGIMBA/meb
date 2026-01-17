@@ -258,16 +258,19 @@ collections:
             name: "hero"
             widget: "object"
             fields:
-              - {label: "Title", name: "title", widget: "string"}
-              - {label: "Subtitle", name: "subtitle", widget: "text"}
-              - {label: "Image", name: "image", widget: "image"}
+              - {label: "RMP Letters", name: "rmpLetters", widget: "string", default: "RMP", hint: "The large orange letters (default: RMP)"}
+              - {label: "Full Name Line 1", name: "rmpFullName1", widget: "string", default: "RWANDA", hint: "First line of full name"}
+              - {label: "Full Name Line 2", name: "rmpFullName2", widget: "string", default: "MEDIA PROJECT", hint: "Second line of full name"}
+              - {label: "Tagline", name: "tagline", widget: "string", default: "THE TRAINING FOR RWANDAN FILMMAKERS", hint: "Yellow text below the logo"}
+              - {label: "Link URL", name: "link", widget: "string", default: "http://www.rwandamediaproject.com/", hint: "Website URL when logo is clicked"}
+              - {label: "Background Image", name: "image", widget: "image"}
           
           - label: "Intro Section"
             name: "intro"
             widget: "object"
             fields:
               - {label: "Title", name: "title", widget: "string"}
-              - {label: "Description 1", name: "description1", widget: "text"}
+              - {label: "Description 1", name: "description1", widget: "text", hint: "Use **text** for bold"}
               - {label: "Description 2", name: "description2", widget: "text"}
               - {label: "Image", name: "image", widget: "image"}
           
@@ -280,21 +283,21 @@ collections:
               - {label: "Description", name: "description", widget: "text"}
               - {label: "Modules", name: "modules", widget: "list", field: {label: "Module", name: "module", widget: "string"}}
               - {label: "Fee Info", name: "fee", widget: "string"}
-              - {label: "Featured", name: "featured", widget: "boolean", default: false}
+              - {label: "Featured", name: "featured", widget: "boolean", default: false, hint: "Check to highlight this program"}
           
           - label: "Curriculum"
             name: "curriculum"
             widget: "list"
             fields:
               - {label: "Category", name: "category", widget: "string"}
-              - {label: "Icon", name: "icon", widget: "string"}
+              - {label: "Icon", name: "icon", widget: "string", hint: "Use emoji, e.g., 📹 🎬 📖 💼"}
               - {label: "Items", name: "items", widget: "list", field: {label: "Item", name: "item", widget: "string"}}
           
           - label: "Stats"
             name: "stats"
             widget: "list"
             fields:
-              - {label: "Number", name: "number", widget: "string"}
+              - {label: "Number", name: "number", widget: "string", hint: "e.g., 200+, 65%, etc."}
               - {label: "Label", name: "label", widget: "string"}
           
           - label: "Testimonials"
@@ -302,7 +305,7 @@ collections:
             widget: "list"
             fields:
               - {label: "Quote", name: "quote", widget: "text"}
-              - {label: "Author", name: "author", widget: "string"}
+              - {label: "Author", name: "author", widget: "string", hint: "e.g., John Doe, Filmmaker"}
 # Impact Page
   - name: "impact"
     label: "Impact Page"

@@ -75,9 +75,9 @@ collections:
               - {label: "CTA Text", name: "ctaText", widget: "string"}
               - {label: "CTA Link", name: "ctaLink", widget: "string"}
 
-# Portfolio Categories (Create this FIRST)
-  - name: "settings"
-    label: "Settings"
+# Portfolio Categories Settings
+  - name: "portfolio_settings"
+    label: "Portfolio Settings"
     files:
       - file: "src/data/portfolio-categories.json"
         label: "Portfolio Categories"
@@ -111,7 +111,7 @@ collections:
               - label: "Category"
                 name: "category"
                 widget: "string"
-                hint: "Type the category value (check Settings > Portfolio Categories for available options)"
+                hint: "Type the category value (check Portfolio Settings > Portfolio Categories for available options)"
  # About Page
   - name: "about"
     label: "About Page"

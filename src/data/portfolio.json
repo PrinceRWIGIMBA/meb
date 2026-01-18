@@ -12,7 +12,7 @@
       "title": "Isano Feature Film",
       "description": "Films created through our training program, showcasing local stories and culture.",
       "videoLink": "#",
-      "category": "animation"
+      "category": "Film"
     },
     {
       "image": "/images/animation-still-1.png",
@@ -26,7 +26,7 @@
       "title": "Bwiza Animation",
       "description": "Cultural storytelling through animation, produced by our training graduates.",
       "videoLink": "#",
-      "category": "animation"
+      "category": "Animation"
     },
     {
       "image": "/images/lake-women-2.jpg",
@@ -54,7 +54,7 @@
       "title": "Women's Stories",
       "description": "Narratives highlighting Rwandan women.",
       "videoLink": "#",
-      "category": "animation"
+      "category": "Documentation"
     }
   ]
 }

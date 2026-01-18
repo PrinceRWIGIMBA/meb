@@ -75,7 +75,23 @@ collections:
               - {label: "CTA Text", name: "ctaText", widget: "string"}
               - {label: "CTA Link", name: "ctaLink", widget: "string"}
 
-# Portfolio Collection
+# Portfolio Categories (Create this FIRST)
+  - name: "settings"
+    label: "Settings"
+    files:
+      - file: "src/data/portfolio-categories.json"
+        label: "Portfolio Categories"
+        name: "portfolio_categories"
+        fields:
+          - label: "Categories"
+            name: "categories"
+            widget: "list"
+            summary: "{{fields.label}}"
+            fields:
+              - {label: "Category Label", name: "label", widget: "string"}
+              - {label: "Category Value", name: "value", widget: "string", hint: "lowercase, no spaces"}
+
+  # Portfolio Collection
   - name: "portfolio_data"
     label: "Portfolio"
     files:
@@ -94,29 +110,9 @@ collections:
               - {label: "Video Link", name: "videoLink", widget: "string", required: false, default: "#"}
               - label: "Category"
                 name: "category"
-                widget: "relation"
-                collection: "portfolio_categories"
-                search_fields: ["name"]
-                value_field: "value"
-                display_fields: ["name"]
-                required: true
-  
-  # Portfolio Categories (separate collection for managing categories)
-  - name: "portfolio_categories"
-    label: "Portfolio Categories"
-    files:
-      - file: "src/data/portfolio-categories.json"
-        label: "Categories"
-        name: "categories"
-        fields:
-          - label: "Available Categories"
-            name: "categories"
-            widget: "list"
-            summary: "{{fields.name}}"
-            fields:
-              - {label: "Category Name", name: "name", widget: "string"}
-              - {label: "Category Value", name: "value", widget: "string", hint: "Lowercase, no spaces (e.g., animation, documentary)"}
-  # About Page
+                widget: "string"
+                hint: "Type the category value (check Settings > Portfolio Categories for available options)"
+ # About Page
   - name: "about"
     label: "About Page"
     files:

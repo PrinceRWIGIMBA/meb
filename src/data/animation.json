@@ -46,6 +46,10 @@
       "description": "Hands-on training programs teaching animation fundamentals, storytelling, and production workflows."
     }
   ],
+  "portfolio": {
+    "title": "Our Portfolio",
+    "subtitle": "Stories brought to life through animation and films"
+  },
   "workshop": {
     "title": "Animation Workshop Programs",
     "subtitle": "Building skills and creating opportunities",

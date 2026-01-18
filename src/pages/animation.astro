@@ -5,7 +5,7 @@ import GalleryItem from '../components/GalleryItem.astro';
 import animationData from '../data/animation.json';
 import portfolioData from '../data/portfolio.json';
 
-const { hero, intro, services, workshop, testimonials } = animationData;
+const { hero, intro, services, portfolio, workshop, testimonials } = animationData;
 
 // Filter animation-specific items or use all
 const portfolioItems = portfolioData.items.filter(item => 
@@ -71,8 +71,8 @@ const portfolioItems = portfolioData.items.filter(item =>
   <section class="portfolio">
     <div class="container">
       <div class="section-title">
-        <h2>Our Portfolio</h2>
-        <p>Stories brought to life through animation and films</p>
+        <h2>{portfolio.title}</h2>
+        <p>{portfolio.subtitle}</p>
       </div>
       
       <div class="grid grid-3">

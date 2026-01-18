@@ -11,7 +11,17 @@
     "title": "Building Rwanda's Film Industry",
     "description1": "MEB CBC collaborates with **Media Education Babelsberg (Germany)** to implement the Rwanda Media Project (RMP), providing comprehensive professional film training in Rwanda.",
     "description2": "This partnership brings world-class film education to aspiring Rwandan filmmakers, with a focus on empowering youth and women to build sustainable careers in the creative industry.",
-    "image": "/images/animation_tarining.jpg"
+    "image": "/images/animation_tarining.jpg",
+    "partners": [
+      {
+        "name": "MEB CBC Rwanda",
+        "description": "Local implementation & social enterprise model"
+      },
+      {
+        "name": "Media Education Babelsberg",
+        "description": "International expertise & curriculum development"
+      }
+    ]
   },
   "programs": [
     {
@@ -58,6 +68,37 @@
       "featured": false
     }
   ],
+  "timeline": {
+    "title": "RMP Program Journey",
+    "subtitle": "From enrollment to professional placement",
+    "steps": [
+      {
+        "icon": "📝",
+        "title": "Application & Selection",
+        "description": "Open application process with focus on motivated candidates from underserved communities. No prior experience required for foundation courses."
+      },
+      {
+        "icon": "🎓",
+        "title": "Intensive Training",
+        "description": "Hands-on learning with professional equipment, real project work, and mentorship from experienced filmmakers."
+      },
+      {
+        "icon": "🎬",
+        "title": "Portfolio Development",
+        "description": "Students work on actual production projects, building a professional portfolio showcasing their skills."
+      },
+      {
+        "icon": "💼",
+        "title": "Job Placement Support",
+        "description": "Career guidance, industry connections, and opportunities to work on MEB CBC productions and partner projects."
+      },
+      {
+        "icon": "🌟",
+        "title": "Continued Support",
+        "description": "Alumni network, advanced workshops, and ongoing mentorship to support long-term career growth."
+      }
+    ]
+  },
   "curriculum": [
     {
       "category": "Production",
@@ -131,5 +172,46 @@
       "quote": "The instructors treated us like professionals from day one. That confidence has stayed with me throughout my career.",
       "author": "Patrick, Documentary Filmmaker"
     }
-  ]
+  ],
+  "facilities": {
+    "title": "Training Facilities & Equipment",
+    "subtitle": "Professional Learning Environment",
+    "description": "Our training center in Kigali provides students with access to professional-grade equipment and facilities:",
+    "items": [
+      "📹 Professional cinema cameras",
+      "🎬 Complete lighting kits",
+      "🎤 Professional audio equipment",
+      "💻 Editing suites with latest software",
+      "🎨 Animation workstations",
+      "📚 Resource library",
+      "🎭 Small production studio",
+      "🌐 High-speed internet connectivity"
+    ],
+    "closingText": "Students get hands-on experience with the same tools used by professionals in the industry, ensuring they're job-ready upon graduation.",
+    "image": "/images/crew.jpg"
+  },
+  "application": {
+    "title": "Ready to Start Your Filmmaking Journey?",
+    "description": "Applications for the next RMP training cohort are now open. Priority is given to motivated youth and women from underserved communities.",
+    "requirementsTitle": "Requirements:",
+    "requirements": [
+      "Age 18-35 (flexibility for exceptional candidates)",
+      "Passion for storytelling and film",
+      "Commitment to complete the program",
+      "Basic English proficiency",
+      "No prior experience required for foundation courses"
+    ],
+    "buttons": [
+      {
+        "text": "Apply Now",
+        "link": "/contact",
+        "style": "primary"
+      },
+      {
+        "text": "Learn About Our Impact",
+        "link": "/social-impact",
+        "style": "outline"
+      }
+    ]
+  }
 }

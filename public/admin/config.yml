@@ -245,8 +245,7 @@ collections:
             fields:
               - {label: "Quote", name: "quote", widget: "text"}
               - {label: "Author", name: "author", widget: "string"}
-
-# Training Page
+# Training Page - Complete CMS Configuration
   - name: "training"
     label: "Training Page"
     files:
@@ -273,6 +272,12 @@ collections:
               - {label: "Description 1", name: "description1", widget: "text", hint: "Use **text** for bold"}
               - {label: "Description 2", name: "description2", widget: "text"}
               - {label: "Image", name: "image", widget: "image"}
+              - label: "Partners"
+                name: "partners"
+                widget: "list"
+                fields:
+                  - {label: "Partner Name", name: "name", widget: "string"}
+                  - {label: "Description", name: "description", widget: "string"}
           
           - label: "Programs"
             name: "programs"
@@ -284,6 +289,20 @@ collections:
               - {label: "Modules", name: "modules", widget: "list", field: {label: "Module", name: "module", widget: "string"}}
               - {label: "Fee Info", name: "fee", widget: "string"}
               - {label: "Featured", name: "featured", widget: "boolean", default: false, hint: "Check to highlight this program"}
+          
+          - label: "Timeline"
+            name: "timeline"
+            widget: "object"
+            fields:
+              - {label: "Title", name: "title", widget: "string", default: "RMP Program Journey"}
+              - {label: "Subtitle", name: "subtitle", widget: "string", default: "From enrollment to professional placement"}
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - {label: "Icon", name: "icon", widget: "string", hint: "Use emoji, e.g., 📝 🎓 🎬"}
+                  - {label: "Title", name: "title", widget: "string"}
+                  - {label: "Description", name: "description", widget: "text"}
           
           - label: "Curriculum"
             name: "curriculum"
@@ -306,7 +325,46 @@ collections:
             fields:
               - {label: "Quote", name: "quote", widget: "text"}
               - {label: "Author", name: "author", widget: "string", hint: "e.g., John Doe, Filmmaker"}
-# Impact Page
+          
+          - label: "Facilities Section"
+            name: "facilities"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string", default: "Training Facilities & Equipment"}
+              - {label: "Subtitle", name: "subtitle", widget: "string", default: "Professional Learning Environment"}
+              - {label: "Description", name: "description", widget: "text", default: "Our training center in Kigali provides students with access to professional-grade equipment and facilities:"}
+              - label: "Equipment & Facilities"
+                name: "items"
+                widget: "list"
+                field: {label: "Item", name: "item", widget: "string", hint: "Add emoji at the start, e.g., 📹 Professional cinema cameras"}
+              - {label: "Closing Text", name: "closingText", widget: "text", default: "Students get hands-on experience with the same tools used by professionals in the industry, ensuring they're job-ready upon graduation."}
+              - {label: "Facilities Image", name: "image", widget: "image"}
+          
+          - label: "Application Section"
+            name: "application"
+            widget: "object"
+            fields:
+              - {label: "Section Title", name: "title", widget: "string", default: "Ready to Start Your Filmmaking Journey?"}
+              - {label: "Description", name: "description", widget: "text", default: "Applications for the next RMP training cohort are now open. Priority is given to motivated youth and women from underserved communities."}
+              - {label: "Requirements Title", name: "requirementsTitle", widget: "string", default: "Requirements:"}
+              - label: "Requirements List"
+                name: "requirements"
+                widget: "list"
+                field: {label: "Requirement", name: "requirement", widget: "string"}
+              - label: "Call-to-Action Buttons"
+                name: "buttons"
+                widget: "list"
+                fields:
+                  - {label: "Button Text", name: "text", widget: "string"}
+                  - {label: "Link URL", name: "link", widget: "string"}
+                  - label: "Button Style"
+                    name: "style"
+                    widget: "select"
+                    options: ["primary", "outline"]
+                    default: "primary"
+                    hint: "primary = filled button, outline = outlined button"
+                    
+  
   - name: "impact"
     label: "Impact Page"
     files:

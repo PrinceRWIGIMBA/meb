@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import trainingData from '../data/training.json';
 
-const { hero, intro, programs, curriculum, stats, testimonials } = trainingData;
+const { hero, intro, programs, timeline, curriculum, stats, testimonials, facilities, application } = trainingData;
 ---
 
 <Layout title="RMP Film Trainings" description="Rwanda Media Project - Professional film training in partnership with Media Education Babelsberg">
@@ -11,16 +11,16 @@ const { hero, intro, programs, curriculum, stats, testimonials } = trainingData;
     <div class="hero-overlay"></div>
     <div class="container">
       <div class="rmp-hero-content">
-        <a href={hero.link || "http://www.rwandamediaproject.com/"} target="_blank" rel="noopener noreferrer" class="rmp-branding">
+        <a href={hero.link} target="_blank" rel="noopener noreferrer" class="rmp-branding">
           <div class="rmp-logo-text">
-            <span class="rmp-letters">{hero.rmpLetters || "RMP"}</span>
+            <span class="rmp-letters">{hero.rmpLetters}</span>
             <span class="rmp-divider">|</span>
             <div class="rmp-full-name">
-              <div>{hero.rmpFullName1 || "RWANDA"}</div>
-              <div>{hero.rmpFullName2 || "MEDIA PROJECT"}</div>
+              <div>{hero.rmpFullName1}</div>
+              <div>{hero.rmpFullName2}</div>
             </div>
           </div>
-          <div class="rmp-tagline">{hero.tagline || "THE TRAINING FOR RWANDAN FILMMAKERS"}</div>
+          <div class="rmp-tagline">{hero.tagline}</div>
           <div class="hover-message">
             <span class="learn-more-text">LEARN MORE →</span>
           </div>
@@ -39,15 +39,15 @@ const { hero, intro, programs, curriculum, stats, testimonials } = trainingData;
           <p>{intro.description2}</p>
           
           <div class="partnership-logos">
-            <div class="partner">
-              <h4>MEB CBC Rwanda</h4>
-              <p>Local implementation & social enterprise model</p>
-            </div>
-            <div class="partner-divider">🤝</div>
-            <div class="partner">
-              <h4>Media Education Babelsberg</h4>
-              <p>International expertise & curriculum development</p>
-            </div>
+            {intro.partners.map((partner: any, index: number) => (
+              <>
+                <div class="partner">
+                  <h4>{partner.name}</h4>
+                  <p>{partner.description}</p>
+                </div>
+                {index < intro.partners.length - 1 && <div class="partner-divider">🤝</div>}
+              </>
+            ))}
           </div>
         </div>
         
@@ -93,50 +93,20 @@ const { hero, intro, programs, curriculum, stats, testimonials } = trainingData;
   <section class="training-timeline">
     <div class="container">
       <div class="section-title">
-        <h2>RMP Program Journey</h2>
-        <p>From enrollment to professional placement</p>
+        <h2>{timeline.title}</h2>
+        <p>{timeline.subtitle}</p>
       </div>
       
       <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-icon">📝</div>
-          <div class="timeline-content">
-            <h4>Application & Selection</h4>
-            <p>Open application process with focus on motivated candidates from underserved communities. No prior experience required for foundation courses.</p>
+        {timeline.steps.map((step: any) => (
+          <div class="timeline-item">
+            <div class="timeline-icon">{step.icon}</div>
+            <div class="timeline-content">
+              <h4>{step.title}</h4>
+              <p>{step.description}</p>
+            </div>
           </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-icon">🎓</div>
-          <div class="timeline-content">
-            <h4>Intensive Training</h4>
-            <p>Hands-on learning with professional equipment, real project work, and mentorship from experienced filmmakers.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-icon">🎬</div>
-          <div class="timeline-content">
-            <h4>Portfolio Development</h4>
-            <p>Students work on actual production projects, building a professional portfolio showcasing their skills.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-icon">💼</div>
-          <div class="timeline-content">
-            <h4>Job Placement Support</h4>
-            <p>Career guidance, industry connections, and opportunities to work on MEB CBC productions and partner projects.</p>
-          </div>
-        </div>
-        
-        <div class="timeline-item">
-          <div class="timeline-icon">🌟</div>
-          <div class="timeline-content">
-            <h4>Continued Support</h4>
-            <p>Alumni network, advanced workshops, and ongoing mentorship to support long-term career growth.</p>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   </section>
@@ -195,30 +165,25 @@ const { hero, intro, programs, curriculum, stats, testimonials } = trainingData;
   <section class="facilities">
     <div class="container">
       <div class="section-title">
-        <h2>Training Facilities & Equipment</h2>
+        <h2>{facilities.title}</h2>
       </div>
       
       <div class="facilities-content">
         <div class="facilities-text">
-          <h3>Professional Learning Environment</h3>
-          <p>Our training center in Kigali provides students with access to professional-grade equipment and facilities:</p>
+          <h3>{facilities.subtitle}</h3>
+          <p>{facilities.description}</p>
           
           <ul class="facilities-list">
-            <li>📹 Professional cinema cameras</li>
-            <li>🎬 Complete lighting kits</li>
-            <li>🎤 Professional audio equipment</li>
-            <li>💻 Editing suites with latest software</li>
-            <li>🎨 Animation workstations</li>
-            <li>📚 Resource library</li>
-            <li>🎭 Small production studio</li>
-            <li>🌐 High-speed internet connectivity</li>
+            {facilities.items.map((item: string) => (
+              <li>{item}</li>
+            ))}
           </ul>
           
-          <p>Students get hands-on experience with the same tools used by professionals in the industry, ensuring they're job-ready upon graduation.</p>
+          <p>{facilities.closingText}</p>
         </div>
         
         <div class="facilities-image">
-          <img src="/images/crew.jpg" alt="Training Facilities">
+          <img src={facilities.image} alt="Training Facilities">
         </div>
       </div>
     </div>
@@ -228,23 +193,22 @@ const { hero, intro, programs, curriculum, stats, testimonials } = trainingData;
   <section class="apply-section">
     <div class="container">
       <div class="apply-box">
-        <h2>Ready to Start Your Filmmaking Journey?</h2>
-        <p>Applications for the next RMP training cohort are now open. Priority is given to motivated youth and women from underserved communities.</p>
+        <h2>{application.title}</h2>
+        <p>{application.description}</p>
         
         <div class="apply-requirements">
-          <h4>Requirements:</h4>
+          <h4>{application.requirementsTitle}</h4>
           <ul>
-            <li>Age 18-35 (flexibility for exceptional candidates)</li>
-            <li>Passion for storytelling and film</li>
-            <li>Commitment to complete the program</li>
-            <li>Basic English proficiency</li>
-            <li>No prior experience required for foundation courses</li>
+            {application.requirements.map((req: string) => (
+              <li>{req}</li>
+            ))}
           </ul>
         </div>
         
         <div class="apply-buttons">
-          <a href="/contact" class="btn btn-primary">Apply Now</a>
-          <a href="/social-impact" class="btn btn-outline">Learn About Our Impact</a>
+          {application.buttons.map((button: any) => (
+            <a href={button.link} class={`btn btn-${button.style}`}>{button.text}</a>
+          ))}
         </div>
       </div>
     </div>

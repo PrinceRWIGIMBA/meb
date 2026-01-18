@@ -75,7 +75,7 @@ collections:
               - {label: "CTA Text", name: "ctaText", widget: "string"}
               - {label: "CTA Link", name: "ctaLink", widget: "string"}
 
- # Portfolio Collection
+# Portfolio Collection
   - name: "portfolio_data"
     label: "Portfolio"
     files:
@@ -94,19 +94,28 @@ collections:
               - {label: "Video Link", name: "videoLink", widget: "string", required: false, default: "#"}
               - label: "Category"
                 name: "category"
-                widget: "select"
-                options:
-                  - { label: "Animation", value: "animation" }
-                  - { label: "Documentary", value: "documentary" }
-                  - { label: "Production", value: "production" }
-                  - { label: "Training", value: "training" }
-                default: "animation"
-                hint: "Select a category. To add new categories, edit this config file."
-              - label: "Custom Category"
-                name: "customCategory"
-                widget: "string"
-                required: false
-                hint: "Optional: Enter a new category if not listed above. This will override the selected category."
+                widget: "relation"
+                collection: "portfolio_categories"
+                search_fields: ["name"]
+                value_field: "value"
+                display_fields: ["name"]
+                required: true
+  
+  # Portfolio Categories (separate collection for managing categories)
+  - name: "portfolio_categories"
+    label: "Portfolio Categories"
+    files:
+      - file: "src/data/portfolio-categories.json"
+        label: "Categories"
+        name: "categories"
+        fields:
+          - label: "Available Categories"
+            name: "categories"
+            widget: "list"
+            summary: "{{fields.name}}"
+            fields:
+              - {label: "Category Name", name: "name", widget: "string"}
+              - {label: "Category Value", name: "value", widget: "string", hint: "Lowercase, no spaces (e.g., animation, documentary)"}
   # About Page
   - name: "about"
     label: "About Page"
